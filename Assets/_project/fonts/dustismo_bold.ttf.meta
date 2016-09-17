@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a47240d4acfb6cd4f98b29c543eae90c
+timeCreated: 1474143428
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Dustismo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5a4d36ac1e234b3489cd088ffdc95bfb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
