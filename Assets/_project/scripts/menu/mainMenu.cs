@@ -7,6 +7,7 @@ public class mainMenu : MonoBehaviour {
     //Logos do menu inicial
     public GameObject logoCreatura;
     public GameObject logoReveja;
+    public GameObject textModosDeJogo;
     //Botoes do menu
     public GameObject botaoJogar;
     public GameObject botaoConfig;
@@ -32,6 +33,7 @@ public class mainMenu : MonoBehaviour {
         btAmpulheta.SetActive(false);
         btIntensivo.SetActive(false);
         btNormal.SetActive(false);
+        textModosDeJogo.SetActive(false);
 
     }
 	
@@ -60,6 +62,7 @@ public class mainMenu : MonoBehaviour {
         btAmpulheta.SetActive(true);
         btIntensivo.SetActive(true);
         btNormal.SetActive(true);
+        textModosDeJogo.SetActive(true);
     }
 
     //Abre as configurações de tela e som
