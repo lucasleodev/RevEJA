@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class mainMenu : MonoBehaviour {
 
@@ -15,13 +16,26 @@ public class mainMenu : MonoBehaviour {
     //Botoes dos modos de jogo
     public GameObject btIntensivo;
     public GameObject btAmpulheta;
-    public GameObject btNormal;
     //Botao para voltar ao menu anterior
     public GameObject btVoltar;
+    //Botao do modo de jogo ampulheta
+    public GameObject btAmpulhetaIniciar;
+    public GameObject textModoJogoAmpulheta;
+    public GameObject textDescricaoAmpulheta;
+    //Botao do modo de jogo niveis
+    public GameObject btNiveisIniciar;
+    public GameObject textModoJogoNiveis;
+    public GameObject textDescricaoNiveis;
+    //Botoes do menu de configurações
+    public Toggle toggleFullscreen;
+    public Slider volumeSlider;
+    public Resolution[] resolution;
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
-	// Use this for initialization
-	public void Start () {
+
+
+    // Use this for initialization
+    public void Start () {
         //Exibe elementos iniciais da tela
         logoCreatura.SetActive(true);
         logoReveja.SetActive(true);
@@ -32,8 +46,11 @@ public class mainMenu : MonoBehaviour {
         btVoltar.SetActive(false);
         btAmpulheta.SetActive(false);
         btIntensivo.SetActive(false);
-        btNormal.SetActive(false);
         textModosDeJogo.SetActive(false);
+        btAmpulhetaIniciar.SetActive(false);
+        textModoJogoAmpulheta.SetActive(false);
+        textDescricaoAmpulheta.SetActive(false);
+        textModoJogoNiveis.SetActive(false);
 
     }
 	
@@ -61,13 +78,32 @@ public class mainMenu : MonoBehaviour {
         btVoltar.SetActive(true);
         btAmpulheta.SetActive(true);
         btIntensivo.SetActive(true);
-        btNormal.SetActive(true);
         textModosDeJogo.SetActive(true);
     }
 
     //Abre as configurações de tela e som
     public void AbrirConfiguracoes()
     {
+    
+    }
 
+    public void ModoAmpulheta()
+    {
+        btAmpulhetaIniciar.SetActive(true);
+        btVoltar.SetActive(true);
+        textModoJogoAmpulheta.SetActive(true);
+        textDescricaoAmpulheta.SetActive(true);
+        //Desliga o menu anterior, deixando só o botao Voltar
+        btVoltar.SetActive(true);
+        btAmpulheta.SetActive(false);
+        btIntensivo.SetActive(false);
+        textModosDeJogo.SetActive(false);
+
+
+    }
+
+    public void ModoNiveis()
+    {
+        textModoJogoNiveis.SetActive(true);
     }
 }
