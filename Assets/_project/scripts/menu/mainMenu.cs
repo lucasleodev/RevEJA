@@ -14,7 +14,7 @@ public class mainMenu : MonoBehaviour {
     public GameObject botaoConfig;
     public GameObject botaoSair;
     //Botoes dos modos de jogo
-    public GameObject btIntensivo;
+    public GameObject btNiveis;
     public GameObject btAmpulheta;
     //Botao para voltar ao menu anterior
     public GameObject btVoltar;
@@ -23,9 +23,10 @@ public class mainMenu : MonoBehaviour {
     public GameObject textModoJogoAmpulheta;
     public GameObject textDescricaoAmpulheta;
     //Botao do modo de jogo niveis
-    public GameObject btNiveisIniciar;
     public GameObject textModoJogoNiveis;
     public GameObject textDescricaoNiveis;
+    public GameObject btNivelBasico;
+    public GameObject btNivelAvancado;
     //Botoes do menu de configurações
     public Toggle toggleFullscreen;
     public Slider volumeSlider;
@@ -45,12 +46,16 @@ public class mainMenu : MonoBehaviour {
         //Esconde modos de jogo e botao voltar
         btVoltar.SetActive(false);
         btAmpulheta.SetActive(false);
-        btIntensivo.SetActive(false);
+        btNiveis.SetActive(false);
         textModosDeJogo.SetActive(false);
         btAmpulhetaIniciar.SetActive(false);
         textModoJogoAmpulheta.SetActive(false);
         textDescricaoAmpulheta.SetActive(false);
         textModoJogoNiveis.SetActive(false);
+        btAmpulhetaIniciar.SetActive(false);
+        textDescricaoNiveis.SetActive(false);
+        btNivelBasico.SetActive(false);
+        btNivelAvancado.SetActive(false);
 
     }
 	
@@ -77,7 +82,7 @@ public class mainMenu : MonoBehaviour {
         //Exibe modos de jogo e botao voltar
         btVoltar.SetActive(true);
         btAmpulheta.SetActive(true);
-        btIntensivo.SetActive(true);
+        btNiveis.SetActive(true);
         textModosDeJogo.SetActive(true);
     }
 
@@ -96,7 +101,7 @@ public class mainMenu : MonoBehaviour {
         //Desliga o menu anterior, deixando só o botao Voltar
         btVoltar.SetActive(true);
         btAmpulheta.SetActive(false);
-        btIntensivo.SetActive(false);
+        btNiveis.SetActive(false);
         textModosDeJogo.SetActive(false);
 
 
@@ -104,6 +109,14 @@ public class mainMenu : MonoBehaviour {
 
     public void ModoNiveis()
     {
+        btVoltar.SetActive(true);
         textModoJogoNiveis.SetActive(true);
+        textDescricaoNiveis.SetActive(true);
+        btNivelBasico.SetActive(true);
+        btNivelAvancado.SetActive(true);
+        //Desliga o menu anterior, deixando só o botao Voltar       
+        btAmpulheta.SetActive(false);
+        btNiveis.SetActive(false);
+        textModosDeJogo.SetActive(false);
     }
 }
