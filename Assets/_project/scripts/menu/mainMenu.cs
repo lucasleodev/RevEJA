@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
+
 
 public class mainMenu : MonoBehaviour {
 
@@ -26,11 +26,7 @@ public class mainMenu : MonoBehaviour {
     public GameObject textModoJogoNiveis;
     public GameObject textDescricaoNiveis;
     public GameObject btNivelBasico;
-    public GameObject btNivelAvancado;
-    //Botoes do menu de configurações
-    public Toggle toggleFullscreen;
-    public Slider volumeSlider;
-    public Resolution[] resolution;
+    public GameObject btNivelAvancado;  
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 
@@ -56,6 +52,8 @@ public class mainMenu : MonoBehaviour {
         textDescricaoNiveis.SetActive(false);
         btNivelBasico.SetActive(false);
         btNivelAvancado.SetActive(false);
+        //UI de configurações
+        
 
     }
 	
