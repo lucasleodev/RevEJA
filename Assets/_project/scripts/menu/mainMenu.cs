@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 public class mainMenu : MonoBehaviour {
@@ -87,7 +88,7 @@ public class mainMenu : MonoBehaviour {
     //Abre as configurações de tela e som
     public void AbrirConfiguracoes()
     {
-    
+        SceneManager.LoadScene("config");
     }
 
     public void ModoAmpulheta()

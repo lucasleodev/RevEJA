@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class configsGame : MonoBehaviour {
 
-    public bool fullscreen;
-    public int resolutionIndex;
-    public float volume;
+    public GameObject botaoVoltarMenu;
+
 
 	// Use this for initialization
 	void Start () {
@@ -16,4 +16,9 @@ public class configsGame : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void VoltarAoMenu()
+    {
+        SceneManager.LoadScene("mainMenu");
+    }
 }

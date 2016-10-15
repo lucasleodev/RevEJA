@@ -1357,8 +1357,6 @@ MonoBehaviour:
   textDescricaoNiveis: {fileID: 1948077023}
   btNivelBasico: {fileID: 982973788}
   btNivelAvancado: {fileID: 1372008086}
-  toggleFullscreen: {fileID: 0}
-  volumeSlider: {fileID: 0}
 --- !u!4 &879464481
 Transform:
   m_ObjectHideFlags: 0
@@ -2695,7 +2693,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1797999375}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 879464480}
+        m_MethodName: AbrirConfiguracoes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1797999375
