@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class configsGame : MonoBehaviour {
 
-   public Toggle botaoTelaCheia;
-
+    //o toggle da cena "Config"
+   public Toggle botaoTelaCheia; 
 
 
     // Use this for initialization
     void Start() {
 
+        //se a tela estiver fullscren, o toggle está marcado
+        //senão, estará desmarcado
      if(Screen.fullScreen == true)
         {
             botaoTelaCheia.isOn = true;
@@ -27,14 +29,15 @@ public class configsGame : MonoBehaviour {
 
     }
 
-    public void Resolucao()
-    {
-
+    public void AlterarResolucao()
+    {       
+                   
     }
 
     public void TelaCheia()
     {
-        
+        //se o toggle estiver marcado, o jogo fica em tela cheia,
+        //senão, fica em modo janela
         if (botaoTelaCheia.isOn == true)
         {
             Screen.fullScreen = true;            
@@ -47,6 +50,7 @@ public class configsGame : MonoBehaviour {
 
     public void VoltarAoMenu()
     {
+        //volta para a cena "Menu principal"
         SceneManager.LoadScene("mainMenu");
     }
 }
