@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   botaoVoltarMenu: {fileID: 0}
-  botaoTelaCheia: {fileID: 0}
+  botaoTelaCheia: {fileID: 692444091}
 --- !u!1 &389786646
 GameObject:
   m_ObjectHideFlags: 0
