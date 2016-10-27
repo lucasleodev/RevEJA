@@ -6,11 +6,21 @@ using UnityEngine.UI;
 public class configsGame : MonoBehaviour {
 
     //o toggle da cena "Config"
-   public Toggle botaoTelaCheia; 
+   public Toggle botaoTelaCheia;
+    //seleção de resolução
+   public Dropdown selecaoResolucao;
+    //temporário para armazenar a posição
+   public static int posicaoResolucao; 
 
 
     // Use this for initialization
     void Start() {
+
+
+        //deixa o dropdown marcado
+        //com a resolução atual
+        selecaoResolucao.value = posicaoResolucao;
+    
 
         //se a tela estiver fullscren, o toggle está marcado
         //senão, estará desmarcado
@@ -29,9 +39,36 @@ public class configsGame : MonoBehaviour {
 
     }
 
+    //identifica a resolução selecionada no menu Dropdown
+    //e a seta, o campo botaoTelaCheia.isOn automaticamente
+    //coloca a resolução junto com a tela cheia caso esteja ativada
     public void AlterarResolucao()
-    {       
-                   
+    {
+        switch (selecaoResolucao.value)
+        {
+            case 0:
+                Screen.SetResolution(320, 240, botaoTelaCheia.isOn);
+                posicaoResolucao = 0;
+                break;
+            case 1:
+                Screen.SetResolution(640, 480, botaoTelaCheia.isOn);
+                posicaoResolucao = 1;
+                break;
+            case 2:
+                Screen.SetResolution(800, 600, botaoTelaCheia.isOn);
+                posicaoResolucao = 2;
+                break;
+            case 3:
+                Screen.SetResolution(1280, 720, botaoTelaCheia.isOn);
+                posicaoResolucao = 3;
+                break;
+            case 4:
+                Screen.SetResolution(1360, 768, botaoTelaCheia.isOn);
+                posicaoResolucao = 4;
+                break;
+            default:                
+                break;
+        }
     }
 
     public void TelaCheia()

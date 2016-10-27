@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   botaoTelaCheia: {fileID: 692444091}
-  tiposResolucao: {fileID: 0}
+  selecaoResolucao: {fileID: 389786648}
 --- !u!1 &389786646
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,17 +474,21 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: 1280 x 720
+    - m_Text: 320 x 240
       m_Image: {fileID: 0}
     - m_Text: 640 x 480
       m_Image: {fileID: 0}
     - m_Text: 800 x 600
       m_Image: {fileID: 0}
+    - m_Text: 1280 x 720
+      m_Image: {fileID: 0}
+    - m_Text: 1360 x 768
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 351857187}
-        m_MethodName: SetarResolucao
+        m_MethodName: AlterarResolucao
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1852,7 +1856,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1280 x 720
+  m_Text: 320 x 240
 --- !u!222 &1728107256
 CanvasRenderer:
   m_ObjectHideFlags: 0
