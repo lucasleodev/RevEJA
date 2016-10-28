@@ -1,0 +1,16 @@
+<?xml version=”1.0″ encoding=”UTF-8″ standalone=”yes”?>
+
+<Quiz>
+	<Pergunta>
+		<materia>Matemática</materia>
+		<nivel>Básico</nivel>
+		<questao>Quanto é 2 + 2 ?</questao>
+		<respostaA>4</respostaA>
+		<respostaB>6</respostaB>
+		<respostaC>3</respostaC>
+		<respostaD>5</respostaD>
+		<idRespostaCorreta>0</idRespostaCorreta>
+		<explicacao>bláblábláblábláblá</explicacao>
+	</Pergunta>
+</Quiz>
+
