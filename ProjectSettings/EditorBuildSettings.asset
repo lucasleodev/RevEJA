@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/_project/scenes/mainMenu.unity
   - enabled: 1
     path: Assets/_project/scenes/config.unity
+  - enabled: 1
+    path: Assets/_project/scenes/jogoTeste.unity
