@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class logicaJogo : MonoBehaviour {
 
@@ -20,6 +21,15 @@ public class logicaJogo : MonoBehaviour {
     public int[] cPortBasic;
     public int[] cPortAvanc;
     public int[] pRespondidas;
+    //Ingame Variables
+    public Text lbPergunta;
+    public Text lbRespA;
+    public Text lbRespB;
+    public Text lbRespC;
+    public Text lbRespD;
+    public Text lbExp;
+    public Text lbNv;
+    public Text lbDisc;
 
 
     // Use this for initialization
@@ -57,6 +67,8 @@ public class logicaJogo : MonoBehaviour {
         cPortBasic = new int[10] { 0, 1, 2, 3, 0, 1, 2, 3, 0, 1 };
         // Português Avançado
         cPortAvanc = new int[10] { 0, 1, 2, 3, 0, 1, 2, 3, 0, 1 };
+
+        lbPergunta.text = "Testando";
     }
 
     // Update is called once per frame

@@ -688,7 +688,7 @@ GameObject:
   - 222: {fileID: 1251326641}
   - 114: {fileID: 1251326640}
   m_Layer: 5
-  m_Name: Text
+  m_Name: lbRespC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -984,7 +984,7 @@ GameObject:
   - 222: {fileID: 1601116246}
   - 114: {fileID: 1601116245}
   m_Layer: 5
-  m_Name: Text
+  m_Name: lbRespD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1047,6 +1047,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1601116243}
+--- !u!1 &1751558453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1751558455}
+  - 114: {fileID: 1751558454}
+  m_Layer: 0
+  m_Name: Gerenciador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1751558454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1751558453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f1a4ec5265ba746bb158838acc440e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pMathBasic: []
+  eMathBasic: []
+  pPortBasic: []
+  ePortBasic: []
+  pMathAvanc: []
+  eMathAvanc: []
+  pPortAvanc: []
+  ePortAvanc: []
+  cMathBasic: 
+  cMathAvanc: 
+  cPortBasic: 
+  cPortAvanc: 
+  pRespondidas: 
+  lbPergunta: {fileID: 1809537538}
+  lbRespA: {fileID: 1859238054}
+  lbRespB: {fileID: 1826122952}
+  lbRespC: {fileID: 1251326640}
+  lbRespD: {fileID: 1601116245}
+  lbExp: {fileID: 669254381}
+  lbNv: {fileID: 1047685855}
+  lbDisc: {fileID: 1973064030}
+--- !u!4 &1751558455
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1751558453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 320, y: 240, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &1809537536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1193,7 @@ GameObject:
   - 222: {fileID: 1826122953}
   - 114: {fileID: 1826122952}
   m_Layer: 5
-  m_Name: Text
+  m_Name: lbRespB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1206,7 +1267,7 @@ GameObject:
   - 222: {fileID: 1859238055}
   - 114: {fileID: 1859238054}
   m_Layer: 5
-  m_Name: Text
+  m_Name: lbRespA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
