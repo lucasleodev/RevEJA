@@ -31,6 +31,7 @@ public class logicaJogo : MonoBehaviour {
     public Text lbExp;
     public Text lbNv;
     public Text lbDisc;
+    public float tempo = 300.0f;
 
 
     // Use this for initialization
@@ -81,14 +82,18 @@ public class logicaJogo : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        if (modoJogo == 0)
+        {
+            tempo -= Time.deltaTime;
+            lbDisc.text = "Tempo: " + Mathf.Floor(tempo / 60) +":" + Mathf.Floor(tempo%60);
+        }
     }
 
     public void ampulMode()
     {
-        lbDisc.text = "";
         lbExp.text = "";
         lbNv.text = "";
+        
     }
 
     public void mathBasic()
