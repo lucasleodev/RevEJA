@@ -93,21 +93,25 @@ public class logicaJogo : MonoBehaviour {
 
     public void mathBasic()
     {
-        
+        lbNv.text = "Básico";
+        lbDisc.text = "Matemática";
     }
 
     public void portBasic()
     {
-
+        lbNv.text = "Básico";
+        lbDisc.text = "Português";
     }
 
     public void mathAvanc()
     {
-
+        lbDisc.text = "Matemática";
+        lbNv.text = "Avançado";
     }
 
     public void portAvanc()
     {
-
+        lbDisc.text = "Português";
+        lbNv.text = "Avançado";
     }
 }
