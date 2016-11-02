@@ -118,4 +118,29 @@ public class mainMenu : MonoBehaviour {
         btNiveis.SetActive(false);
         textModosDeJogo.SetActive(false);
     }
+
+    public void ampulhetaStart()
+    {
+
+    }
+
+    public void mathBasicStart()
+    {
+
+    }
+
+    public void mathAvancStart()
+    {
+
+    }
+
+    public void portBasicStart()
+    {
+
+    }
+
+    public void portAvancStart()
+    {
+
+    }
 }

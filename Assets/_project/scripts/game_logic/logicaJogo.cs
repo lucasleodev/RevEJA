@@ -23,7 +23,7 @@ public class logicaJogo : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         // Perguntas de Matemática Básica
         pMathBasic = new string[10] { "p0", "p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9" };
         // Respostas de Matemática Básica
@@ -58,10 +58,14 @@ public class logicaJogo : MonoBehaviour {
         // Português Avançado
         cPortAvanc = new int[10] { 0, 1, 2, 3, 0, 1, 2, 3, 0, 1 };
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
+    // Update is called once per frame
+    void Update() {
+
+    }
+
+    public static void comecaJogo(int modojogo)
+        {
+
+        }
 }
