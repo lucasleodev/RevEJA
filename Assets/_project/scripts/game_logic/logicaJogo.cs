@@ -65,7 +65,39 @@ public class logicaJogo : MonoBehaviour {
     }
 
     public static void comecaJogo(int modojogo)
+    {
+        switch(modojogo)
         {
-
+            case 0: ampul(); break;
+            case 1: mathBasic(); break;
+            case 2: mathAvanc(); break;
+            case 3: portBasic(); break;
+            case 4: portAvanc(); break;
         }
+    }
+
+    public static void ampul()
+    {
+
+    }
+
+    public static void mathBasic()
+    {
+
+    }
+
+    public static void portBasic()
+    {
+
+    }
+
+    public static void mathAvanc()
+    {
+
+    }
+
+    public static void portAvanc()
+    {
+
+    }
 }
