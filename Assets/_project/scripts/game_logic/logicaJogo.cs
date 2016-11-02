@@ -19,6 +19,7 @@ public class logicaJogo : MonoBehaviour {
     public int[] cMathAvanc;
     public int[] cPortBasic;
     public int[] cPortAvanc;
+    public int[] pRespondidas;
 
 
     // Use this for initialization
