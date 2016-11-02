@@ -121,26 +121,26 @@ public class mainMenu : MonoBehaviour {
 
     public void ampulhetaStart()
     {
-
+        logicaJogo.comecaJogo(0);
     }
 
     public void mathBasicStart()
     {
-
+        logicaJogo.comecaJogo(1);
     }
 
     public void mathAvancStart()
     {
-
+        logicaJogo.comecaJogo(2);
     }
 
     public void portBasicStart()
     {
-
+        logicaJogo.comecaJogo(3);
     }
 
     public void portAvancStart()
     {
-
+        logicaJogo.comecaJogo(4);
     }
 }
