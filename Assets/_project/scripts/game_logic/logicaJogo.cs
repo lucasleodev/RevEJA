@@ -85,7 +85,7 @@ public class logicaJogo : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (modoJogo == 0 && tempo != 0)
+        if (modoJogo == 0 && tempo > 0)
         {
             tempo -= Time.deltaTime;
             lbDisc.text = "Tempo: " + Mathf.Floor(tempo / 60) +":" + Mathf.Floor(tempo%60);
@@ -186,7 +186,7 @@ public class logicaJogo : MonoBehaviour {
                 }
             }
         }
-        //GameOver//
+
 
         
     }
