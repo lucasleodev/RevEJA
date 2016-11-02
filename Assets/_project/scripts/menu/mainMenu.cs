@@ -122,30 +122,30 @@ public class mainMenu : MonoBehaviour {
     public void ampulhetaStart()
     {
         SceneManager.LoadScene("jogo");
-        logicaJogo.comecaJogo(0);
+        logicaJogo.modoJogo = 0;
     }
 
     public void mathBasicStart()
     {
         SceneManager.LoadScene("jogo");
-        logicaJogo.comecaJogo(1);
+        logicaJogo.modoJogo = 1;
     }
 
     public void mathAvancStart()
     {
         SceneManager.LoadScene("jogo");
-        logicaJogo.comecaJogo(2);
+        logicaJogo.modoJogo = 2;
     }
 
     public void portBasicStart()
     {
         SceneManager.LoadScene("jogo");
-        logicaJogo.comecaJogo(3);
+        logicaJogo.modoJogo = 3;
     }
 
     public void portAvancStart()
     {
         SceneManager.LoadScene("jogo");
-        logicaJogo.comecaJogo(4);
+        logicaJogo.modoJogo = 4;
     }
 }

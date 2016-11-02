@@ -21,6 +21,7 @@ public class logicaJogo : MonoBehaviour {
     public int[] cPortBasic;
     public int[] cPortAvanc;
     public int[] pRespondidas;
+    public static int modoJogo;
     //Ingame Variables
     public Text lbPergunta;
     public Text lbRespA;
@@ -68,17 +69,7 @@ public class logicaJogo : MonoBehaviour {
         // Português Avançado
         cPortAvanc = new int[10] { 0, 1, 2, 3, 0, 1, 2, 3, 0, 1 };
 
-        lbPergunta.text = "Testando";
-    }
-
-    // Update is called once per frame
-    void Update() {
-
-    }
-
-    public static void comecaJogo(int modojogo)
-    {
-        switch(modojogo)
+        switch (modoJogo)
         {
             case 0: ampulMode(); break;
             case 1: mathBasic(); break;
@@ -88,27 +79,34 @@ public class logicaJogo : MonoBehaviour {
         }
     }
 
-    public static void ampulMode()
+    // Update is called once per frame
+    void Update() {
+
+    }
+
+    public void ampulMode()
+    {
+        lbDisc.text = "";
+        lbExp.text = "";
+        lbNv.text = "";
+    }
+
+    public void mathBasic()
+    {
+        
+    }
+
+    public void portBasic()
     {
 
     }
 
-    public static void mathBasic()
+    public void mathAvanc()
     {
 
     }
 
-    public static void portBasic()
-    {
-
-    }
-
-    public static void mathAvanc()
-    {
-
-    }
-
-    public static void portAvanc()
+    public void portAvanc()
     {
 
     }

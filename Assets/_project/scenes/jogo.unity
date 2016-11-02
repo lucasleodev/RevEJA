@@ -211,6 +211,7 @@ GameObject:
   - 4: {fileID: 189942538}
   - 114: {fileID: 189942537}
   - 114: {fileID: 189942536}
+  - 114: {fileID: 189942539}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -263,6 +264,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &189942539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 189942535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f1a4ec5265ba746bb158838acc440e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pMathBasic: []
+  eMathBasic: []
+  pPortBasic: []
+  ePortBasic: []
+  pMathAvanc: []
+  eMathAvanc: []
+  pPortAvanc: []
+  ePortAvanc: []
+  cMathBasic: 
+  cMathAvanc: 
+  cPortBasic: 
+  cPortAvanc: 
+  lbPergunta: {fileID: 0}
+  lbRespA: {fileID: 0}
+  lbRespB: {fileID: 0}
+  lbRespC: {fileID: 0}
+  lbRespD: {fileID: 0}
+  lbExp: {fileID: 0}
+  lbNv: {fileID: 0}
+  lbDisc: {fileID: 0}
 --- !u!1 &403235016
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +567,66 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924390577}
+--- !u!1 &935528119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 935528121}
+  - 114: {fileID: 935528120}
+  m_Layer: 0
+  m_Name: Gerenciador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &935528120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935528119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f1a4ec5265ba746bb158838acc440e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pMathBasic: []
+  eMathBasic: []
+  pPortBasic: []
+  ePortBasic: []
+  pMathAvanc: []
+  eMathAvanc: []
+  pPortAvanc: []
+  ePortAvanc: []
+  cMathBasic: 
+  cMathAvanc: 
+  cPortBasic: 
+  cPortAvanc: 
+  lbPergunta: {fileID: 1809537538}
+  lbRespA: {fileID: 1859238054}
+  lbRespB: {fileID: 1826122952}
+  lbRespC: {fileID: 1251326640}
+  lbRespD: {fileID: 1601116245}
+  lbExp: {fileID: 669254381}
+  lbNv: {fileID: 1047685855}
+  lbDisc: {fileID: 1973064030}
+--- !u!4 &935528121
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935528119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 320, y: 240, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &1047685853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,67 +1139,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1601116243}
---- !u!1 &1751558453
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1751558455}
-  - 114: {fileID: 1751558454}
-  m_Layer: 0
-  m_Name: Gerenciador
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!114 &1751558454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1751558453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f1a4ec5265ba746bb158838acc440e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pMathBasic: []
-  eMathBasic: []
-  pPortBasic: []
-  ePortBasic: []
-  pMathAvanc: []
-  eMathAvanc: []
-  pPortAvanc: []
-  ePortAvanc: []
-  cMathBasic: 
-  cMathAvanc: 
-  cPortBasic: 
-  cPortAvanc: 
-  pRespondidas: 
-  lbPergunta: {fileID: 1809537538}
-  lbRespA: {fileID: 1859238054}
-  lbRespB: {fileID: 1826122952}
-  lbRespC: {fileID: 1251326640}
-  lbRespD: {fileID: 1601116245}
-  lbExp: {fileID: 669254381}
-  lbNv: {fileID: 1047685855}
-  lbDisc: {fileID: 1973064030}
---- !u!4 &1751558455
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1751558453}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 320, y: 240, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
 --- !u!1 &1809537536
 GameObject:
   m_ObjectHideFlags: 0
