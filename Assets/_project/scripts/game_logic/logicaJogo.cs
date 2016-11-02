@@ -68,7 +68,7 @@ public class logicaJogo : MonoBehaviour {
     {
         switch(modojogo)
         {
-            case 0: ampul(); break;
+            case 0: ampulMode(); break;
             case 1: mathBasic(); break;
             case 2: mathAvanc(); break;
             case 3: portBasic(); break;
@@ -76,7 +76,7 @@ public class logicaJogo : MonoBehaviour {
         }
     }
 
-    public static void ampul()
+    public static void ampulMode()
     {
 
     }

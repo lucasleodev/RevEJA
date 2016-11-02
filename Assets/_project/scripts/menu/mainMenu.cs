@@ -121,26 +121,31 @@ public class mainMenu : MonoBehaviour {
 
     public void ampulhetaStart()
     {
+        SceneManager.LoadScene("jogo");
         logicaJogo.comecaJogo(0);
     }
 
     public void mathBasicStart()
     {
+        SceneManager.LoadScene("jogo");
         logicaJogo.comecaJogo(1);
     }
 
     public void mathAvancStart()
     {
+        SceneManager.LoadScene("jogo");
         logicaJogo.comecaJogo(2);
     }
 
     public void portBasicStart()
     {
+        SceneManager.LoadScene("jogo");
         logicaJogo.comecaJogo(3);
     }
 
     public void portAvancStart()
     {
+        SceneManager.LoadScene("jogo");
         logicaJogo.comecaJogo(4);
     }
 }
