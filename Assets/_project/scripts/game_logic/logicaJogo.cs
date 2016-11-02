@@ -48,7 +48,7 @@ public class logicaJogo : MonoBehaviour {
         ePortBasic = new string[10] { "e0", "e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9" };
         // Explicações de Português Avançado
         ePortAvanc = new string[10] { "e0", "e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9" };
-        /* Respostas Corretas [A = 0, B = 1, C = 2, D = 3]*/
+        /* Respostas Corretas [A = 0, B = 1, C = 2, D = 3] */
         // Matemática Básica
         cMathBasic = new int[10] { 0, 1, 2, 3, 0, 1, 2, 3, 0, 1 };
         // Matemática Avançada
@@ -63,10 +63,5 @@ public class logicaJogo : MonoBehaviour {
 	void Update () {
 	
 	}
-
-    public void verificarResposta()
-    {
-
-    }
 
 }
