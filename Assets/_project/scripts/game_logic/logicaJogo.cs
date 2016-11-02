@@ -32,6 +32,9 @@ public class logicaJogo : MonoBehaviour {
     public Text lbNv;
     public Text lbDisc;
     public float tempo = 300.0f;
+    public int respostaUsuario = -1;
+    public int acertos = 0;
+    public int erros = 0;
 
 
     // Use this for initialization
@@ -82,7 +85,7 @@ public class logicaJogo : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (modoJogo == 0)
+        if (modoJogo == 0 && tempo != 0)
         {
             tempo -= Time.deltaTime;
             lbDisc.text = "Tempo: " + Mathf.Floor(tempo / 60) +":" + Mathf.Floor(tempo%60);
@@ -91,8 +94,100 @@ public class logicaJogo : MonoBehaviour {
 
     public void ampulMode()
     {
+        int randomquest = Random.Range(0, 9);
+        int randomdisc = Random.Range(0, 3);
+        int[,] jafeitas = new int[4, 10];
+        int temp;
         lbExp.text = "";
         lbNv.text = "";
+        
+        while(tempo > 0)
+        {
+            respostaUsuario = -1;
+
+            if(randomdisc == 0)
+            {
+                temp = randomquest;
+                lbPergunta.text = pMathBasic[temp];
+                lbRespA.text = rMathBasic[temp, 0];
+                lbRespB.text = rMathBasic[temp, 1];
+                lbRespC.text = rMathBasic[temp, 2];
+                lbRespD.text = rMathBasic[temp, 3];
+                while (respostaUsuario == -1)
+                {
+                    if (respostaUsuario == cMathBasic[temp])
+                    {
+                        acertos++;
+                    }
+                    else if(respostaUsuario != -1)
+                    {
+                        erros++;
+                    }
+                }   
+            }
+            else if(randomdisc == 1)
+            {
+                temp = randomquest;
+                lbPergunta.text = pMathAvanc[temp];
+                lbRespA.text = rMathAvanc[temp, 0];
+                lbRespB.text = rMathAvanc[temp, 1];
+                lbRespC.text = rMathAvanc[temp, 2];
+                lbRespD.text = rMathAvanc[temp, 3];
+                while (respostaUsuario == -1)
+                {
+                    if (respostaUsuario == cMathAvanc[temp])
+                    {
+                        acertos++;
+                    }
+                    else if (respostaUsuario != -1)
+                    {
+                        erros++;
+                    }
+                }
+            }
+            else if(randomdisc == 2)
+            {
+                temp = randomquest;
+                lbPergunta.text = pPortBasic[temp];
+                lbRespA.text = rPortBasic[temp, 0];
+                lbRespB.text = rPortBasic[temp, 1];
+                lbRespC.text = rPortBasic[temp, 2];
+                lbRespD.text = rPortBasic[temp, 3];
+                while (respostaUsuario == -1)
+                {
+                    if (respostaUsuario == cPortBasic[temp])
+                    {
+                        acertos++;
+                    }
+                    else if (respostaUsuario != -1)
+                    {
+                        erros++;
+                    }
+                }
+            }
+            else if(randomdisc == 3)
+            {
+                temp = randomquest;
+                lbPergunta.text = pPortAvanc[temp];
+                lbRespA.text = rPortAvanc[temp, 0];
+                lbRespB.text = rPortAvanc[temp, 1];
+                lbRespC.text = rPortAvanc[temp, 2];
+                lbRespD.text = rPortAvanc[temp, 3];
+                while (respostaUsuario == -1)
+                {
+                    if (respostaUsuario == cPortAvanc[temp])
+                    {
+                        acertos++;
+                    }
+                    else if (respostaUsuario != -1)
+                    {
+                        erros++;
+                    }
+                }
+            }
+        }
+        //GameOver//
+
         
     }
 
@@ -118,5 +213,25 @@ public class logicaJogo : MonoBehaviour {
     {
         lbDisc.text = "Português";
         lbNv.text = "Avançado";
+    }
+
+    public void respA()
+    {
+        respostaUsuario = 0;
+    }
+
+    public void respB()
+    {
+        respostaUsuario = 1;
+    }
+
+    public void respC()
+    {
+        respostaUsuario = 2;
+    }
+
+    public void respD()
+    {
+        respostaUsuario = 3;
     }
 }

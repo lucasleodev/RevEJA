@@ -165,7 +165,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 167130113}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935528120}
+        m_MethodName: respC
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &167130113
@@ -287,6 +298,7 @@ MonoBehaviour:
   cMathAvanc: 
   cPortBasic: 
   cPortAvanc: 
+  pRespondidas: 
   lbPergunta: {fileID: 0}
   lbRespA: {fileID: 0}
   lbRespB: {fileID: 0}
@@ -295,6 +307,10 @@ MonoBehaviour:
   lbExp: {fileID: 0}
   lbNv: {fileID: 0}
   lbDisc: {fileID: 0}
+  tempo: 300
+  respostaUsuario: 0
+  acertos: 0
+  erros: 0
 --- !u!1 &403235016
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +547,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 924390580}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935528120}
+        m_MethodName: respA
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &924390580
@@ -606,6 +633,7 @@ MonoBehaviour:
   cMathAvanc: 
   cPortBasic: 
   cPortAvanc: 
+  pRespondidas: 
   lbPergunta: {fileID: 1809537538}
   lbRespA: {fileID: 1859238054}
   lbRespB: {fileID: 1826122952}
@@ -614,6 +642,10 @@ MonoBehaviour:
   lbExp: {fileID: 669254381}
   lbNv: {fileID: 1047685855}
   lbDisc: {fileID: 1973064030}
+  tempo: 300
+  respostaUsuario: 0
+  acertos: 0
+  erros: 0
 --- !u!4 &935528121
 Transform:
   m_ObjectHideFlags: 0
@@ -918,7 +950,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1263683714}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935528120}
+        m_MethodName: respB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1263683714
@@ -1029,7 +1072,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1392953789}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935528120}
+        m_MethodName: respD
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1392953789
