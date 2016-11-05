@@ -20,7 +20,8 @@ public class logicaJogo : MonoBehaviour {
     public int[] cMathAvanc;
     public int[] cPortBasic;
     public int[] cPortAvanc;
-    public int[] pRespondidas;
+    public bool[] pRespondidas;
+    public bool[,] pRespondidasAmp;
     public static int modoJogo;
     //Ingame Variables
     public Text lbPergunta;
@@ -31,10 +32,11 @@ public class logicaJogo : MonoBehaviour {
     public Text lbExp;
     public Text lbNv;
     public Text lbDisc;
-    public float tempo = 300.0f;
-    public int respostaUsuario = -1;
-    public int acertos = 0;
-    public int erros = 0;
+    public float tempo;
+    public int respostaUsuario;
+    public int acertos;
+    public int erros;
+    public int quest, disc;
 
 
     // Use this for initialization
@@ -72,6 +74,13 @@ public class logicaJogo : MonoBehaviour {
         cPortBasic = new int[10] { 0, 1, 2, 3, 0, 1, 2, 3, 0, 1 };
         // Português Avançado
         cPortAvanc = new int[10] { 0, 1, 2, 3, 0, 1, 2, 3, 0, 1 };
+        // Colocar vetores e matrizes
+        pRespondidasAmp = new bool[4, 10] { { false, false, false, false, false, false, false, false, false, false }, { false, false, false, false, false, false, false, false, false, false }, { false, false, false, false, false, false, false, false, false, false }, { false, false, false, false, false, false, false, false, false, false } };
+        pRespondidas = new bool[10] { false, false, false, false, false, false, false, false, false, false };
+        respostaUsuario = -1;
+        acertos = 0;
+        erros = 0;
+        tempo = 300.0f;
 
         switch (modoJogo)
         {
@@ -90,102 +99,123 @@ public class logicaJogo : MonoBehaviour {
             tempo -= Time.deltaTime;
             lbDisc.text = "Tempo: " + Mathf.Floor(tempo / 60) +":" + Mathf.Floor(tempo%60);
         }
+        else if(modoJogo == 0)
+        {
+            // GAME OVER
+        }
     }
 
     public void ampulMode()
-    {
-        int randomquest = Random.Range(0, 9);
-        int randomdisc = Random.Range(0, 3);
-        int[,] jafeitas = new int[4, 10];
-        int temp;
+    {       
         lbExp.text = "";
         lbNv.text = "";
-        
-        while(tempo > 0)
+       
+        if(respostaUsuario == -1 && acertos+erros < 40)
         {
-            respostaUsuario = -1;
+            quest = Random.Range(0, 9);
+            disc = Random.Range(0, 3);
 
-            if(randomdisc == 0)
+            for (int i = 0;i < 40000;i++)
             {
-                temp = randomquest;
-                lbPergunta.text = pMathBasic[temp];
-                lbRespA.text = rMathBasic[temp, 0];
-                lbRespB.text = rMathBasic[temp, 1];
-                lbRespC.text = rMathBasic[temp, 2];
-                lbRespD.text = rMathBasic[temp, 3];
-                while (respostaUsuario == -1)
+                if(pRespondidasAmp[disc, quest] == true)
                 {
-                    if (respostaUsuario == cMathBasic[temp])
-                    {
-                        acertos++;
-                    }
-                    else if(respostaUsuario != -1)
-                    {
-                        erros++;
-                    }
-                }   
-            }
-            else if(randomdisc == 1)
-            {
-                temp = randomquest;
-                lbPergunta.text = pMathAvanc[temp];
-                lbRespA.text = rMathAvanc[temp, 0];
-                lbRespB.text = rMathAvanc[temp, 1];
-                lbRespC.text = rMathAvanc[temp, 2];
-                lbRespD.text = rMathAvanc[temp, 3];
-                while (respostaUsuario == -1)
-                {
-                    if (respostaUsuario == cMathAvanc[temp])
-                    {
-                        acertos++;
-                    }
-                    else if (respostaUsuario != -1)
-                    {
-                        erros++;
-                    }
+                    quest = Random.Range(0, 9);
+                    disc = Random.Range(0, 3);
                 }
             }
-            else if(randomdisc == 2)
+
+            if (disc == 0)
             {
-                temp = randomquest;
-                lbPergunta.text = pPortBasic[temp];
-                lbRespA.text = rPortBasic[temp, 0];
-                lbRespB.text = rPortBasic[temp, 1];
-                lbRespC.text = rPortBasic[temp, 2];
-                lbRespD.text = rPortBasic[temp, 3];
-                while (respostaUsuario == -1)
-                {
-                    if (respostaUsuario == cPortBasic[temp])
-                    {
-                        acertos++;
-                    }
-                    else if (respostaUsuario != -1)
-                    {
-                        erros++;
-                    }
-                }
+                lbPergunta.text = pMathBasic[quest];
+                lbRespA.text = rMathBasic[quest, 0];
+                lbRespB.text = rMathBasic[quest, 1];
+                lbRespC.text = rMathBasic[quest, 2];
+                lbRespD.text = rMathBasic[quest, 3];
+ 
             }
-            else if(randomdisc == 3)
+            else if(disc == 1)
             {
-                temp = randomquest;
-                lbPergunta.text = pPortAvanc[temp];
-                lbRespA.text = rPortAvanc[temp, 0];
-                lbRespB.text = rPortAvanc[temp, 1];
-                lbRespC.text = rPortAvanc[temp, 2];
-                lbRespD.text = rPortAvanc[temp, 3];
-                while (respostaUsuario == -1)
-                {
-                    if (respostaUsuario == cPortAvanc[temp])
-                    {
-                        acertos++;
-                    }
-                    else if (respostaUsuario != -1)
-                    {
-                        erros++;
-                    }
-                }
+                lbPergunta.text = pMathAvanc[quest];
+                lbRespA.text = rMathAvanc[quest, 0];
+                lbRespB.text = rMathAvanc[quest, 1];
+                lbRespC.text = rMathAvanc[quest, 2];
+                lbRespD.text = rMathAvanc[quest, 3];
+
+            }
+            else if(disc == 2)
+            {
+                lbPergunta.text = pPortBasic[quest];
+                lbRespA.text = rPortBasic[quest, 0];
+                lbRespB.text = rPortBasic[quest, 1];
+                lbRespC.text = rPortBasic[quest, 2];
+                lbRespD.text = rPortBasic[quest, 3];
+
+            }
+            else if(disc == 3)
+            {
+                lbPergunta.text = pPortAvanc[quest];
+                lbRespA.text = rPortAvanc[quest, 0];
+                lbRespB.text = rPortAvanc[quest, 1];
+                lbRespC.text = rPortAvanc[quest, 2];
+                lbRespD.text = rPortAvanc[quest, 3];
+
             }
         }
+        else if(acertos+erros < 40)
+        {
+            if(disc == 0)
+            {
+                if(respostaUsuario == cMathBasic[quest])
+                {
+                    acertos++;
+                }
+                else
+                {
+                    erros++;
+                }
+            }
+            else if(disc == 1)
+            {
+                if (respostaUsuario == cMathAvanc[quest])
+                {
+                    acertos++;
+                }
+                else
+                {
+                    erros++;
+                }
+            }
+            else if (disc == 2)
+            {
+                if (respostaUsuario == cPortBasic[quest])
+                {
+                    acertos++;
+                }
+                else
+                {
+                    erros++;
+                }
+            }
+            else if(disc == 3)
+            {
+                if (respostaUsuario == cPortAvanc[quest])
+                {
+                    acertos++;
+                }
+                else
+                {
+                    erros++;
+                }
+            }
+            respostaUsuario = -1;
+            pRespondidasAmp[disc, quest] = true;
+            ampulMode();
+        }
+        else
+        {
+            //GAME OVER
+        }
+
 
 
         
@@ -218,20 +248,52 @@ public class logicaJogo : MonoBehaviour {
     public void respA()
     {
         respostaUsuario = 0;
+        switch(modoJogo)
+        {
+            case 0: ampulMode(); break;
+            case 1: mathBasic(); break;
+            case 2: mathAvanc(); break;
+            case 3: portBasic(); break;
+            case 4: portAvanc(); break;
+        }
     }
 
     public void respB()
     {
         respostaUsuario = 1;
+        switch (modoJogo)
+        {
+            case 0: ampulMode(); break;
+            case 1: mathBasic(); break;
+            case 2: mathAvanc(); break;
+            case 3: portBasic(); break;
+            case 4: portAvanc(); break;
+        }
     }
 
     public void respC()
     {
         respostaUsuario = 2;
+        switch (modoJogo)
+        {
+            case 0: ampulMode(); break;
+            case 1: mathBasic(); break;
+            case 2: mathAvanc(); break;
+            case 3: portBasic(); break;
+            case 4: portAvanc(); break;
+        }
     }
 
     public void respD()
     {
         respostaUsuario = 3;
+        switch (modoJogo)
+        {
+            case 0: ampulMode(); break;
+            case 1: mathBasic(); break;
+            case 2: mathAvanc(); break;
+            case 3: portBasic(); break;
+            case 4: portAvanc(); break;
+        }
     }
 }
