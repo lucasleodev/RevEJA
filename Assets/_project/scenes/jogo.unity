@@ -222,7 +222,6 @@ GameObject:
   - 4: {fileID: 189942538}
   - 114: {fileID: 189942537}
   - 114: {fileID: 189942536}
-  - 114: {fileID: 189942539}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -275,42 +274,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!114 &189942539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 189942535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f1a4ec5265ba746bb158838acc440e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pMathBasic: []
-  eMathBasic: []
-  pPortBasic: []
-  ePortBasic: []
-  pMathAvanc: []
-  eMathAvanc: []
-  pPortAvanc: []
-  ePortAvanc: []
-  cMathBasic: 
-  cMathAvanc: 
-  cPortBasic: 
-  cPortAvanc: 
-  pRespondidas: 
-  lbPergunta: {fileID: 0}
-  lbRespA: {fileID: 0}
-  lbRespB: {fileID: 0}
-  lbRespC: {fileID: 0}
-  lbRespD: {fileID: 0}
-  lbExp: {fileID: 0}
-  lbNv: {fileID: 0}
-  lbDisc: {fileID: 0}
-  tempo: 300
-  respostaUsuario: 0
-  acertos: 0
-  erros: 0
 --- !u!1 &403235016
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +522,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 935528122}
+        m_MethodName: RespostaCorreta
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &924390580
@@ -603,6 +577,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 935528121}
   - 114: {fileID: 935528120}
+  - 114: {fileID: 935528122}
   m_Layer: 0
   m_Name: Gerenciador
   m_TagString: Untagged
@@ -646,6 +621,8 @@ MonoBehaviour:
   respostaUsuario: 0
   acertos: 0
   erros: 0
+  quest: 0
+  disc: 0
 --- !u!4 &935528121
 Transform:
   m_ObjectHideFlags: 0
@@ -659,6 +636,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &935528122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935528119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff9516cba4270146981a43472095715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  botaoA: {fileID: 924390579}
+  botaoB: {fileID: 167130112}
+  botaoC: {fileID: 1263683713}
+  botaoD: {fileID: 1392953788}
+  corRespostaCerta:
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
+    m_ColorMultiplier: 0
+    m_FadeDuration: 0
+  corRespostaErrada:
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
+    m_ColorMultiplier: 0
+    m_FadeDuration: 0
+  corNormal:
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
+    m_ColorMultiplier: 0
+    m_FadeDuration: 0
+  respCerta: {r: 0, g: 1, b: 0.37931037, a: 1}
+  respErrada: {r: 0.9852941, g: 0, b: 0, a: 1}
+  corPadrao: {r: 1, g: 1, b: 1, a: 1}
+  valor: 5
 --- !u!1 &1047685853
 GameObject:
   m_ObjectHideFlags: 0

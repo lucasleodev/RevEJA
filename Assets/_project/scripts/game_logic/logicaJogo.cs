@@ -115,7 +115,7 @@ public class logicaJogo : MonoBehaviour {
             quest = Random.Range(0, 9);
             disc = Random.Range(0, 3);
 
-            for (int i = 0;i < 40000;i++)
+            for (int i = 0;i < 65535;i++)
             {
                 if(pRespondidasAmp[disc, quest] == true)
                 {
