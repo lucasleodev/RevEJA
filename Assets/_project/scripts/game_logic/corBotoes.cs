@@ -25,9 +25,16 @@ public class corBotoes : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        //cor dos botoes no estado normal
         corNormal.normalColor = corPadrao;
         corRespostaCerta.normalColor = respCerta;
         corRespostaErrada.normalColor = respErrada;
+
+        //cor quando clicados
+        corNormal.pressedColor = corPadrao;
+        corRespostaCerta.pressedColor = respCerta;
+        corRespostaErrada.pressedColor = respErrada;
     }
 	
 	// Update is called once per frame
@@ -40,6 +47,8 @@ public class corBotoes : MonoBehaviour {
         if (valor != 0)
         {
            botaoA.colors = corNormal;
+           botaoB.colors = corRespostaCerta;
+           botaoC.colors = corRespostaErrada;
         }
         
     }
