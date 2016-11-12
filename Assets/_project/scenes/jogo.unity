@@ -652,28 +652,28 @@ MonoBehaviour:
   botaoC: {fileID: 1263683713}
   botaoD: {fileID: 1392953788}
   corRespostaCerta:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0, g: 0.47058827, b: 0.1764706, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.64705884, b: 0.24264707, a: 1}
+    m_PressedColor: {r: 0.009731844, g: 0.33088237, b: 0.1301633, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
   corRespostaErrada:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.7294118, g: 0.19215688, b: 0.19215688, a: 1}
+    m_HighlightedColor: {r: 0.85294116, g: 0.21950692, b: 0.21950692, a: 1}
+    m_PressedColor: {r: 0.5294118, g: 0.20242216, b: 0.20242216, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
   corNormal:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.9117647, g: 0.8917909, b: 0.7307526, a: 1}
+    m_HighlightedColor: {r: 0.9485294, g: 0.87058264, b: 0.61375433, a: 1}
+    m_PressedColor: {r: 0.74264705, g: 0.7319632, b: 0.64435554, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
-  respCerta: {r: 0, g: 1, b: 0.37931037, a: 1}
-  respErrada: {r: 0.9852941, g: 0, b: 0, a: 1}
+  respCerta: {r: 0, g: 0.47058827, b: 0.1764706, a: 1}
+  respErrada: {r: 0.72794116, g: 0.19269031, b: 0.19269031, a: 0.687}
   corPadrao: {r: 1, g: 1, b: 1, a: 1}
   valor: 5
 --- !u!1 &1047685853

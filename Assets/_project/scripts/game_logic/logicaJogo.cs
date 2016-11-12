@@ -3,7 +3,9 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class logicaJogo : MonoBehaviour {
-
+    //cria a instância para usar os métodos da classe Corbotoes.cs
+    private corBotoes cores;
+    //-------------FIM DESSE TRECHO---------------------
     public string[] pMathBasic;
     public string[] eMathBasic;
     public string[,] rMathBasic;
@@ -40,7 +42,11 @@ public class logicaJogo : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start() {
+    void Start() {    
+        //cria instância e deixa botões com a cor definida como default
+        cores = GetComponent<corBotoes>();
+        cores.iniciarCorBotoes();
+        //----------FIM DO TRECHO DE INICIAR AS CORES--------------
         // Perguntas de Matemática Básica
         pMathBasic = new string[10] { "p0", "p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9" };
         // Respostas de Matemática Básica

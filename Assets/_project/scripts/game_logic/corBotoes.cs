@@ -41,6 +41,14 @@ public class corBotoes : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void iniciarCorBotoes()
+    {
+        botaoA.colors = corNormal;
+        botaoB.colors = corNormal;
+        botaoC.colors = corNormal;
+        botaoD.colors = corNormal;
+    }
     
     public void RespostaCorreta()
     {
