@@ -88,7 +88,7 @@ public class corBotoes : MonoBehaviour {
 
     public void AguardarTempoResposta()
     {
-
+        PausaResposta();
     }
 
     //corotina para fazer o jogo esperar certo tempo para mostrar a resposta

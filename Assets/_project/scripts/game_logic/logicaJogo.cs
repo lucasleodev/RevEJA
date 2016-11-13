@@ -292,7 +292,7 @@ public class logicaJogo : MonoBehaviour {
 
     public void respD()
     {
-        respostaUsuario = 3;
+        respostaUsuario = 3;      
         switch (modoJogo)
         {
             case 0: ampulMode(); break;
