@@ -21,7 +21,7 @@ public class corBotoes : MonoBehaviour {
     public Color respErrada = new Color(0.2F, 0.3F, 0.4F);
     public Color corPadrao = new Color(0.2F, 0.3F, 0.4F);
 
-    public int valor = 5;
+    public int tempoEspera = 5;
 
     // Use this for initialization
     void Start () {
@@ -50,14 +50,50 @@ public class corBotoes : MonoBehaviour {
         botaoD.colors = corNormal;
     }
     
-    public void RespostaCorreta()
+    public void RespostaCorretaA()
     {
-        if (valor != 0)
-        {
-           botaoA.colors = corNormal;
-           botaoB.colors = corRespostaCerta;
-           botaoC.colors = corRespostaErrada;
-        }
-        
+        botaoA.colors = corRespostaCerta;
+        botaoB.colors = corRespostaErrada;
+        botaoC.colors = corRespostaErrada;
+        botaoD.colors = corRespostaErrada;
+        PausaResposta();
+    }
+
+    public void RespostaCorretaB()
+    {
+        botaoA.colors = corRespostaErrada;
+        botaoB.colors = corRespostaCerta;
+        botaoC.colors = corRespostaErrada;
+        botaoD.colors = corRespostaErrada;
+        PausaResposta();
+    }
+
+    public void RespostaCorretaC()
+    {
+        botaoA.colors = corRespostaErrada;
+        botaoB.colors = corRespostaErrada;
+        botaoC.colors = corRespostaCerta;
+        botaoD.colors = corRespostaErrada;
+        PausaResposta();
+    }
+
+    public void RespostaCorretaD()
+    {
+        botaoA.colors = corRespostaErrada;
+        botaoB.colors = corRespostaErrada;
+        botaoC.colors = corRespostaErrada;
+        botaoD.colors = corRespostaCerta;
+        PausaResposta();
+    }
+
+    public void AguardarTempoResposta()
+    {
+
+    }
+
+    //corotina para fazer o jogo esperar certo tempo para mostrar a resposta
+    IEnumerator PausaResposta()
+    {
+        yield return new WaitForSeconds(tempoEspera);
     }
 }
