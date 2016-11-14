@@ -254,7 +254,8 @@ public class logicaJogo : MonoBehaviour {
     public void respA()
     {
         respostaUsuario = 0;
-        switch(modoJogo)
+        cores.AguardarTempoResposta();
+        switch (modoJogo)
         {
             case 0: ampulMode(); break;
             case 1: mathBasic(); break;
@@ -267,6 +268,7 @@ public class logicaJogo : MonoBehaviour {
     public void respB()
     {
         respostaUsuario = 1;
+        cores.AguardarTempoResposta();
         switch (modoJogo)
         {
             case 0: ampulMode(); break;
@@ -280,6 +282,7 @@ public class logicaJogo : MonoBehaviour {
     public void respC()
     {
         respostaUsuario = 2;
+        cores.AguardarTempoResposta();
         switch (modoJogo)
         {
             case 0: ampulMode(); break;
@@ -292,7 +295,8 @@ public class logicaJogo : MonoBehaviour {
 
     public void respD()
     {
-        respostaUsuario = 3;      
+        respostaUsuario = 3;
+        cores.AguardarTempoResposta();      
         switch (modoJogo)
         {
             case 0: ampulMode(); break;
