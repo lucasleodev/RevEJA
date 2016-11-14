@@ -21,7 +21,7 @@ public class corBotoes : MonoBehaviour {
     public Color respErrada = new Color(0.2F, 0.3F, 0.4F);
     public Color corPadrao = new Color(0.2F, 0.3F, 0.4F);
 
-    public float tempoEspera = 1.0f;
+    public int tempoEspera = 5;
 
     // Use this for initialization
     void Start () {
@@ -56,7 +56,7 @@ public class corBotoes : MonoBehaviour {
         botaoB.colors = corRespostaErrada;
         botaoC.colors = corRespostaErrada;
         botaoD.colors = corRespostaErrada;
-        
+        PausaResposta();
     }
 
     public void RespostaCorretaB()
@@ -65,7 +65,7 @@ public class corBotoes : MonoBehaviour {
         botaoB.colors = corRespostaCerta;
         botaoC.colors = corRespostaErrada;
         botaoD.colors = corRespostaErrada;
-      
+        PausaResposta();
     }
 
     public void RespostaCorretaC()
@@ -74,7 +74,7 @@ public class corBotoes : MonoBehaviour {
         botaoB.colors = corRespostaErrada;
         botaoC.colors = corRespostaCerta;
         botaoD.colors = corRespostaErrada;
-        
+        PausaResposta();
     }
 
     public void RespostaCorretaD()
@@ -83,20 +83,17 @@ public class corBotoes : MonoBehaviour {
         botaoB.colors = corRespostaErrada;
         botaoC.colors = corRespostaErrada;
         botaoD.colors = corRespostaCerta;
-       
+        PausaResposta();
     }
 
     public void AguardarTempoResposta()
     {
-        StartCoroutine(PausaResposta());
+        PausaResposta();
     }
 
     //corotina para fazer o jogo esperar certo tempo para mostrar a resposta
     IEnumerator PausaResposta()
     {
-        Time.timeScale = 0.001f;
         yield return new WaitForSeconds(tempoEspera);
-        print("Temrinou os " + tempoEspera);
-        Time.timeScale = 1.0f;
     }
 }
