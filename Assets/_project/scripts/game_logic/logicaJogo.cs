@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
 public class logicaJogo : MonoBehaviour {
     //cria um booleano pra pausar o timeDelta
     public bool tempoPausado = false;
