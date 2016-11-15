@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class logicaJogo : MonoBehaviour {
+    //cria um booleano pra pausar o timeDelta
+    public bool tempoPausado = false;
     //cria a instância para usar os métodos da classe Corbotoes.cs
     private corBotoes cores;
     //-------------FIM DESSE TRECHO---------------------
@@ -102,8 +104,7 @@ public class logicaJogo : MonoBehaviour {
     void Update() {
         if (modoJogo == 0 && tempo > 0)
         {
-            tempo -= Time.deltaTime;
-            lbDisc.text = "Tempo: " + Mathf.Floor(tempo / 60) +":" + Mathf.Floor(tempo%60);
+            CronometroModoAmpulheta();
         }
         else if(modoJogo == 0)
         {
@@ -253,7 +254,8 @@ public class logicaJogo : MonoBehaviour {
 
     public void respA()
     {
-        respostaUsuario = 0;
+        respostaUsuario = 0;                       
+        cores.AguardarTempoResposta();               
         switch(modoJogo)
         {
             case 0: ampulMode(); break;
@@ -267,6 +269,7 @@ public class logicaJogo : MonoBehaviour {
     public void respB()
     {
         respostaUsuario = 1;
+        cores.AguardarTempoResposta();
         switch (modoJogo)
         {
             case 0: ampulMode(); break;
@@ -280,6 +283,7 @@ public class logicaJogo : MonoBehaviour {
     public void respC()
     {
         respostaUsuario = 2;
+        cores.AguardarTempoResposta();
         switch (modoJogo)
         {
             case 0: ampulMode(); break;
@@ -292,7 +296,8 @@ public class logicaJogo : MonoBehaviour {
 
     public void respD()
     {
-        respostaUsuario = 3;      
+        respostaUsuario = 3;
+        cores.AguardarTempoResposta();
         switch (modoJogo)
         {
             case 0: ampulMode(); break;
@@ -302,4 +307,20 @@ public class logicaJogo : MonoBehaviour {
             case 4: portAvanc(); break;
         }
     }
+
+    public void CronometroModoAmpulheta()
+    {
+        if(tempoPausado==false)
+        {
+            tempo -= Time.deltaTime;
+        }
+        else
+        {
+            lbDisc.text = "Tempo: " + Mathf.Floor(tempo / 60) + ":" + Mathf.Floor(tempo % 60);
+        }
+
+        lbDisc.text = "Tempo: " + Mathf.Floor(tempo / 60) + ":" + Mathf.Floor(tempo % 60);
+    }
+
+
 }

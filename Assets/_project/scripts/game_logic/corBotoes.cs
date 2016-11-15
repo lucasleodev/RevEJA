@@ -85,15 +85,33 @@ public class corBotoes : MonoBehaviour {
         botaoD.colors = corRespostaCerta;
         PausaResposta();
     }
-
+    //Destrava os botões para o jogador poder voltar a jogar
+    public void HabilitarBotoes()
+    {
+        botaoA.interactable = true;
+        botaoB.interactable = true;
+        botaoC.interactable = true;
+        botaoD.interactable = true;
+    }
+    //Trava os botões para o jogador poder ler a explicação
+    public void DesabilitarBotoes()
+    {
+        botaoA.interactable = false;
+        botaoB.interactable = false;
+        botaoC.interactable = false;
+        botaoD.interactable = false;
+    }
+    //Chama a corotina para que o jogo "pare" para que o player leia a explicação
     public void AguardarTempoResposta()
     {
-        PausaResposta();
+        StartCoroutine(PausaResposta());
     }
 
     //corotina para fazer o jogo esperar certo tempo para mostrar a resposta
     IEnumerator PausaResposta()
     {
+        DesabilitarBotoes();        
         yield return new WaitForSeconds(tempoEspera);
+        HabilitarBotoes();        
     }
 }
