@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class corBotoes : MonoBehaviour {
-
+    //para pegar as variaveis e funcoes do codigo logicaJogo.cs
+    public logicaJogo logicJogo;
     //referencia os botões
     public Button botaoA;
     public Button botaoB;
@@ -25,7 +26,8 @@ public class corBotoes : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+        //cria a instancia de logicaJogo.cs
+        logicJogo = GetComponent<logicaJogo>();
         //cor dos botoes no estado normal
         corNormal.normalColor = corPadrao;
         corRespostaCerta.normalColor = respCerta;
@@ -110,8 +112,11 @@ public class corBotoes : MonoBehaviour {
     //corotina para fazer o jogo esperar certo tempo para mostrar a resposta
     IEnumerator PausaResposta()
     {
+        logicJogo.tempoPausado = true;
         DesabilitarBotoes();        
         yield return new WaitForSeconds(tempoEspera);
+        logicJogo.ModoDeJogo();
+        logicJogo.tempoPausado = false;
         HabilitarBotoes();        
     }
 }

@@ -255,59 +255,28 @@ public class logicaJogo : MonoBehaviour {
     public void respA()
     {
         respostaUsuario = 0;                       
-        cores.AguardarTempoResposta();               
-        switch(modoJogo)
-        {
-            case 0: ampulMode(); break;
-            case 1: mathBasic(); break;
-            case 2: mathAvanc(); break;
-            case 3: portBasic(); break;
-            case 4: portAvanc(); break;
-        }
+        cores.AguardarTempoResposta();        
     }
 
     public void respB()
     {
         respostaUsuario = 1;
         cores.AguardarTempoResposta();
-        switch (modoJogo)
-        {
-            case 0: ampulMode(); break;
-            case 1: mathBasic(); break;
-            case 2: mathAvanc(); break;
-            case 3: portBasic(); break;
-            case 4: portAvanc(); break;
-        }
     }
 
     public void respC()
     {
         respostaUsuario = 2;
         cores.AguardarTempoResposta();
-        switch (modoJogo)
-        {
-            case 0: ampulMode(); break;
-            case 1: mathBasic(); break;
-            case 2: mathAvanc(); break;
-            case 3: portBasic(); break;
-            case 4: portAvanc(); break;
-        }
     }
 
     public void respD()
     {
         respostaUsuario = 3;
         cores.AguardarTempoResposta();
-        switch (modoJogo)
-        {
-            case 0: ampulMode(); break;
-            case 1: mathBasic(); break;
-            case 2: mathAvanc(); break;
-            case 3: portBasic(); break;
-            case 4: portAvanc(); break;
-        }
     }
 
+    //caso seja false, o tempo corre normal. Se for true, ele é pausado
     public void CronometroModoAmpulheta()
     {
         if(tempoPausado==false)
@@ -320,6 +289,19 @@ public class logicaJogo : MonoBehaviour {
         }
 
         lbDisc.text = "Tempo: " + Mathf.Floor(tempo / 60) + ":" + Mathf.Floor(tempo % 60);
+    }
+
+    //para o Update, para selecionar o modo de jogo
+    public void ModoDeJogo()
+    {
+        switch (modoJogo)
+        {
+            case 0: ampulMode(); break;
+            case 1: mathBasic(); break;
+            case 2: mathAvanc(); break;
+            case 3: portBasic(); break;
+            case 4: portAvanc(); break;
+        }
     }
 
 
