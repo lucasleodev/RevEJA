@@ -90,6 +90,80 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &337631774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 337631775}
+  - 222: {fileID: 337631776}
+  - 114: {fileID: 337631777}
+  m_Layer: 5
+  m_Name: lb_Estatistica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &337631775
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 337631774}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 420970543}
+  m_RootOrder: 7
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 8, y: -129}
+  m_SizeDelta: {x: 1068, y: 172}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &337631776
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 337631774}
+--- !u!114 &337631777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 337631774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5a4d36ac1e234b3489cd088ffdc95bfb, type: 3}
+    m_FontSize: 34
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 46
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Estat\xEDsticas"
 --- !u!1 &351857185
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,11 +201,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 351857185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 294e524dd51db024e802781748be1afc, type: 3}
+  m_Script: {fileID: 11500000, guid: d046233655ccc914c8641313e8e5e088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botaoTelaCheia: {fileID: 0}
-  selecaoResolucao: {fileID: 0}
+  lbModoJogo: {fileID: 412913876}
+  lbAcertos: {fileID: 1590129229}
+  lbErros: {fileID: 1416588392}
+  lbEstatisticas: {fileID: 337631777}
+  btMenuPrincipal: {fileID: 1505398636}
 --- !u!1 &412913874
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +241,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188, y: 90}
+  m_AnchoredPosition: {x: -180, y: 119}
   m_SizeDelta: {x: 692, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &412913876
@@ -298,6 +375,7 @@ RectTransform:
   - {fileID: 412913875}
   - {fileID: 1590129228}
   - {fileID: 1416588391}
+  - {fileID: 337631775}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -607,7 +685,7 @@ GameObject:
   - 222: {fileID: 1416588393}
   - 114: {fileID: 1416588392}
   m_Layer: 5
-  m_Name: lb_Acertos (1)
+  m_Name: lb_Erros
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -628,7 +706,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180, y: 6}
+  m_AnchoredPosition: {x: -334, y: -2}
   m_SizeDelta: {x: 377, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1416588392
@@ -746,7 +824,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 351857187}
+      - m_Target: {fileID: 0}
         m_MethodName: VoltarAoMenu
         m_Mode: 1
         m_Arguments:
@@ -824,7 +902,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180, y: 6}
+  m_AnchoredPosition: {x: -334, y: 45}
   m_SizeDelta: {x: 377, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590129229
