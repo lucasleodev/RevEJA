@@ -57,8 +57,7 @@ public class corBotoes : MonoBehaviour {
         botaoA.colors = corRespostaCerta;
         botaoB.colors = corRespostaErrada;
         botaoC.colors = corRespostaErrada;
-        botaoD.colors = corRespostaErrada;
-        PausaResposta();
+        botaoD.colors = corRespostaErrada;        
     }
 
     public void RespostaCorretaB()
@@ -66,8 +65,7 @@ public class corBotoes : MonoBehaviour {
         botaoA.colors = corRespostaErrada;
         botaoB.colors = corRespostaCerta;
         botaoC.colors = corRespostaErrada;
-        botaoD.colors = corRespostaErrada;
-        PausaResposta();
+        botaoD.colors = corRespostaErrada;       
     }
 
     public void RespostaCorretaC()
@@ -75,8 +73,7 @@ public class corBotoes : MonoBehaviour {
         botaoA.colors = corRespostaErrada;
         botaoB.colors = corRespostaErrada;
         botaoC.colors = corRespostaCerta;
-        botaoD.colors = corRespostaErrada;
-        PausaResposta();
+        botaoD.colors = corRespostaErrada;        
     }
 
     public void RespostaCorretaD()
@@ -84,24 +81,44 @@ public class corBotoes : MonoBehaviour {
         botaoA.colors = corRespostaErrada;
         botaoB.colors = corRespostaErrada;
         botaoC.colors = corRespostaErrada;
-        botaoD.colors = corRespostaCerta;
-        PausaResposta();
+        botaoD.colors = corRespostaCerta;        
+    }
+
+    public void MudancaCorBotoes(int opcaoEscolhida)
+    {
+        switch (opcaoEscolhida)
+        {
+            case 0:
+                RespostaCorretaA();
+                break;
+            case 1:
+                RespostaCorretaB();
+                break;
+            case 2:
+                RespostaCorretaC();
+                break;
+            case 3:
+                RespostaCorretaD();
+                break;
+            default:
+                break;
+        }
     }
     //Destrava os botões para o jogador poder voltar a jogar
     public void HabilitarBotoes()
     {
-        botaoA.interactable = true;
+    /*    botaoA.interactable = true;
         botaoB.interactable = true;
         botaoC.interactable = true;
-        botaoD.interactable = true;
+        botaoD.interactable = true;*/
     }
     //Trava os botões para o jogador poder ler a explicação
     public void DesabilitarBotoes()
     {
-        botaoA.interactable = false;
+     /*   botaoA.interactable = false;
         botaoB.interactable = false;
         botaoC.interactable = false;
-        botaoD.interactable = false;
+        botaoD.interactable = false;*/
     }
     //Chama a corotina para que o jogo "pare" para que o player leia a explicação
     public void AguardarTempoResposta()
@@ -113,10 +130,10 @@ public class corBotoes : MonoBehaviour {
     IEnumerator PausaResposta()
     {
         logicJogo.tempoPausado = true;
-        DesabilitarBotoes();        
+       // DesabilitarBotoes();        
         yield return new WaitForSeconds(tempoEspera);
         logicJogo.ModoDeJogo();
         logicJogo.tempoPausado = false;
-        HabilitarBotoes();        
+        //HabilitarBotoes();        
     }
 }

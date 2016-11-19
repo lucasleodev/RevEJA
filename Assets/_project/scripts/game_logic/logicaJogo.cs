@@ -119,7 +119,9 @@ public class logicaJogo : MonoBehaviour {
     }
 
     public void ampulMode()
-    {        
+    {
+        //iniciar com cor default
+        cores.iniciarCorBotoes();
         //esconder outros labels da cena
         lbExp.text = "";
         lbNv.text = "";
@@ -238,6 +240,9 @@ public class logicaJogo : MonoBehaviour {
 
     public void mathBasic()
     {
+        //iniciar com cor default
+        cores.iniciarCorBotoes();
+        //jogo em si
         lbNv.text = "Básico";
         lbDisc.text = "Matemática";
         quest = Random.Range(0, 9);
@@ -282,6 +287,9 @@ public class logicaJogo : MonoBehaviour {
 
     public void portBasic()
     {
+        //iniciar com cor default
+        cores.iniciarCorBotoes();
+        //jogo em si
         lbNv.text = "Básico";
         lbDisc.text = "Português";
 
@@ -327,6 +335,9 @@ public class logicaJogo : MonoBehaviour {
 
     public void mathAvanc()
     {
+        //iniciar com cor default
+        cores.iniciarCorBotoes();
+        //jogo em si
         lbDisc.text = "Matemática";
         lbNv.text = "Avançado";
 
@@ -372,6 +383,9 @@ public class logicaJogo : MonoBehaviour {
 
     public void portAvanc()
     {
+        //iniciar com cor default
+        cores.iniciarCorBotoes();
+        //jogo em si
         lbDisc.text = "Português";
         lbNv.text = "Avançado";
 
@@ -417,25 +431,33 @@ public class logicaJogo : MonoBehaviour {
 
     public void respA()
     {
-        respostaUsuario = 0;                       
+        respostaUsuario = 0;
+        VerificarRespostaCor();
+        //aguarda a pausa para ler a explicação
         cores.AguardarTempoResposta();        
     }
 
     public void respB()
     {
         respostaUsuario = 1;
+        VerificarRespostaCor();
+        //aguarda a pausa para ler a explicação
         cores.AguardarTempoResposta();
     }
 
     public void respC()
     {
         respostaUsuario = 2;
+        VerificarRespostaCor();
+        //aguarda a pausa para ler a explicação
         cores.AguardarTempoResposta();
     }
 
     public void respD()
     {
         respostaUsuario = 3;
+        VerificarRespostaCor();
+        //aguarda a pausa para ler a explicação
         cores.AguardarTempoResposta();
     }
 
@@ -464,6 +486,118 @@ public class logicaJogo : MonoBehaviour {
             case 2: mathAvanc(); break;
             case 3: portBasic(); break;
             case 4: portAvanc(); break;
+        }
+    }
+
+    public void VerificarRespostaCor()
+    {
+        switch (modoJogo)
+        {
+            case 0:
+                switch (disc)
+                {
+                    case 0:
+                        //if para mudar a cor do botão
+                        if (respostaUsuario == cMathBasic[quest])
+                        {
+                            cores.MudancaCorBotoes(respostaUsuario);
+
+                        }
+                        else
+                        {
+                            cores.MudancaCorBotoes(cMathBasic[quest]);
+                        }
+                        break;
+                    case 1:
+                        //if para mudar a cor do botão
+                        if (respostaUsuario == cMathAvanc[quest])
+                        {
+                            cores.MudancaCorBotoes(respostaUsuario);
+
+                        }
+                        else
+                        {
+                            cores.MudancaCorBotoes(cMathAvanc[quest]);
+                        }
+                        break;
+                    case 2:
+                        //if para mudar a cor do botão
+                        if (respostaUsuario == cPortBasic[quest])
+                        {
+                            cores.MudancaCorBotoes(respostaUsuario);
+
+                        }
+                        else
+                        {
+                            cores.MudancaCorBotoes(cPortBasic[quest]);
+                        }
+                        break;
+                    case 3:
+                        //if para mudar a cor do botão
+                        if (respostaUsuario == cPortAvanc[quest])
+                        {
+                            cores.MudancaCorBotoes(respostaUsuario);
+
+                        }
+                        else
+                        {
+                            cores.MudancaCorBotoes(cPortAvanc[quest]);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case 1:
+                //if para mudar a cor do botão
+                if (respostaUsuario == cMathBasic[quest])
+                {
+                    cores.MudancaCorBotoes(respostaUsuario);
+
+                }
+                else
+                {
+                    cores.MudancaCorBotoes(cMathBasic[quest]);
+                }
+                break;
+            case 2:
+                //if para mudar a cor do botão
+                if (respostaUsuario == cMathAvanc[quest])
+                {
+                    cores.MudancaCorBotoes(respostaUsuario);
+
+                }
+                else
+                {
+                    cores.MudancaCorBotoes(cMathAvanc[quest]);
+                }
+                break;
+            case 3:
+                //if para mudar a cor do botão
+                if (respostaUsuario == cPortBasic[quest])
+                {
+                    cores.MudancaCorBotoes(respostaUsuario);
+
+                }
+                else
+                {
+                    cores.MudancaCorBotoes(cPortBasic[quest]);
+                }
+                break;
+            case 4:
+                //if para mudar a cor do botão
+                if (respostaUsuario == cPortAvanc[quest])
+                {
+                    cores.MudancaCorBotoes(respostaUsuario);
+
+                }
+                else
+                {
+                    cores.MudancaCorBotoes(cPortAvanc[quest]);
+                }
+                break;
+            default:
+                break;
         }
     }
 
