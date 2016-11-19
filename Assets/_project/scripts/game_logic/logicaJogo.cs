@@ -47,6 +47,8 @@ public class logicaJogo : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        //corrige um bug de setar o tempo em 0 após sair pelo pause
+        Time.timeScale = 1.0f;
         //cria instância e deixa botões com a cor definida como default
         cores = GetComponent<corBotoes>();
         cores.iniciarCorBotoes();
