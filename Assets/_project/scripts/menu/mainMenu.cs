@@ -27,7 +27,11 @@ public class mainMenu : MonoBehaviour {
     public GameObject textModoJogoNiveis;
     public GameObject textDescricaoNiveis;
     public GameObject btNivelBasico;
-    public GameObject btNivelAvancado;  
+    public GameObject btNivelAvancado;
+    public GameObject btPortBasico;
+    public GameObject btPortAvancado;
+    public GameObject btMathBasico;
+    public GameObject btMathAvancado;
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 
@@ -53,8 +57,12 @@ public class mainMenu : MonoBehaviour {
         textDescricaoNiveis.SetActive(false);
         btNivelBasico.SetActive(false);
         btNivelAvancado.SetActive(false);
+        btPortAvancado.SetActive(false);
+        btPortBasico.SetActive(false);
+        btMathAvancado.SetActive(false);
+        btMathBasico.SetActive(false);
         //UI de configurações
-        
+
 
     }
 	
@@ -117,6 +125,25 @@ public class mainMenu : MonoBehaviour {
         btAmpulheta.SetActive(false);
         btNiveis.SetActive(false);
         textModosDeJogo.SetActive(false);
+    }
+
+    public void NivelBasico()
+    {
+        btNivelBasico.SetActive(false);
+        btNivelAvancado.SetActive(false);
+
+        btPortBasico.SetActive(true);
+        btMathBasico.SetActive(true);
+    }
+
+    public void NivelAvancado()
+    {
+        btNivelBasico.SetActive(false);
+        btNivelAvancado.SetActive(false);
+
+        btPortAvancado.SetActive(true);
+        btMathAvancado.SetActive(true);
+
     }
 
     public void ampulhetaStart()

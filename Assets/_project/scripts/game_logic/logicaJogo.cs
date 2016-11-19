@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class logicaJogo : MonoBehaviour {
     //cria um booleano pra pausar o timeDelta
@@ -110,6 +110,7 @@ public class logicaJogo : MonoBehaviour {
         else if(modoJogo == 0)
         {
             // GAME OVER
+            SceneManager.LoadScene("gameOver");
         }
     }
 
@@ -222,6 +223,7 @@ public class logicaJogo : MonoBehaviour {
         else
         {
             //GAME OVER
+            SceneManager.LoadScene("gameOver");
         }
 
 
@@ -233,24 +235,179 @@ public class logicaJogo : MonoBehaviour {
     {
         lbNv.text = "Básico";
         lbDisc.text = "Matemática";
+        quest = Random.Range(0, 9);
+
+        if (respostaUsuario == -1 && acertos + erros < 10 && erros < 3)
+        {
+
+            for (int i = 0; i < 65535; i++)
+            {
+                if (pRespondidas[quest] == true)
+                {
+                    quest = Random.Range(0, 9);
+                }
+            }
+
+            lbPergunta.text = pMathBasic[quest];
+            lbRespA.text = rMathBasic[quest, 0];
+            lbRespB.text = rMathBasic[quest, 1];
+            lbRespC.text = rMathBasic[quest, 2];
+            lbRespD.text = rMathBasic[quest, 3];
+        }
+        else if( acertos + erros < 10 && erros < 3)
+        {
+            if (respostaUsuario == cMathBasic[quest])
+            {
+                acertos++;
+            }
+            else
+            {
+                erros++;
+            }
+            respostaUsuario = -1;
+            pRespondidas[quest] = true;
+            mathBasic();
+        }
+        else
+        {
+            //GAME OVER
+            SceneManager.LoadScene("gameOver");
+        }
     }
 
     public void portBasic()
     {
         lbNv.text = "Básico";
         lbDisc.text = "Português";
+
+        quest = Random.Range(0, 9);
+
+        if (respostaUsuario == -1 && acertos + erros < 10 && erros < 3)
+        {
+
+            for (int i = 0; i < 65535; i++)
+            {
+                if (pRespondidas[quest] == true)
+                {
+                    quest = Random.Range(0, 9);
+                }
+            }
+
+            lbPergunta.text = pPortBasic[quest];
+            lbRespA.text = rPortBasic[quest, 0];
+            lbRespB.text = rPortBasic[quest, 1];
+            lbRespC.text = rPortBasic[quest, 2];
+            lbRespD.text = rPortBasic[quest, 3];
+        }
+        else if (acertos + erros < 10 && erros < 3)
+        {
+            if (respostaUsuario == cPortBasic[quest])
+            {
+                acertos++;
+            }
+            else
+            {
+                erros++;
+            }
+            respostaUsuario = -1;
+            pRespondidas[quest] = true;
+            portBasic();
+        }
+        else
+        {
+            //GAME OVER
+            SceneManager.LoadScene("gameOver");
+        }
     }
 
     public void mathAvanc()
     {
         lbDisc.text = "Matemática";
         lbNv.text = "Avançado";
+
+        quest = Random.Range(0, 9);
+
+        if (respostaUsuario == -1 && acertos + erros < 10 && erros < 3)
+        {
+
+            for (int i = 0; i < 65535; i++)
+            {
+                if (pRespondidas[quest] == true)
+                {
+                    quest = Random.Range(0, 9);
+                }
+            }
+
+            lbPergunta.text = pMathAvanc[quest];
+            lbRespA.text = rMathAvanc[quest, 0];
+            lbRespB.text = rMathAvanc[quest, 1];
+            lbRespC.text = rMathAvanc[quest, 2];
+            lbRespD.text = rMathAvanc[quest, 3];
+        }
+        else if (acertos + erros < 10 && erros < 3)
+        {
+            if (respostaUsuario == cMathAvanc[quest])
+            {
+                acertos++;
+            }
+            else
+            {
+                erros++;
+            }
+            respostaUsuario = -1;
+            pRespondidas[quest] = true;
+            mathAvanc();
+        }
+        else
+        {
+            //GAME OVER
+            SceneManager.LoadScene("gameOver");
+        }
     }
 
     public void portAvanc()
     {
         lbDisc.text = "Português";
         lbNv.text = "Avançado";
+
+        quest = Random.Range(0, 9);
+
+        if (respostaUsuario == -1 && acertos + erros < 10 && erros < 3)
+        {
+
+            for (int i = 0; i < 65535; i++)
+            {
+                if (pRespondidas[quest] == true)
+                {
+                    quest = Random.Range(0, 9);
+                }
+            }
+
+            lbPergunta.text = pPortAvanc[quest];
+            lbRespA.text = rPortAvanc[quest, 0];
+            lbRespB.text = rPortAvanc[quest, 1];
+            lbRespC.text = rPortAvanc[quest, 2];
+            lbRespD.text = rPortAvanc[quest, 3];
+        }
+        else if (acertos + erros < 10 && erros < 3)
+        {
+            if (respostaUsuario == cPortAvanc[quest])
+            {
+                acertos++;
+            }
+            else
+            {
+                erros++;
+            }
+            respostaUsuario = -1;
+            pRespondidas[quest] = true;
+            portAvanc();
+        }
+        else
+        {
+            //GAME OVER
+            SceneManager.LoadScene("gameOver");
+        }
     }
 
     public void respA()

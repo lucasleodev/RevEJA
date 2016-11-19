@@ -208,7 +208,6 @@ MonoBehaviour:
   lbAcertos: {fileID: 1590129229}
   lbErros: {fileID: 1416588392}
   lbEstatisticas: {fileID: 337631777}
-  btMenuPrincipal: {fileID: 1505398636}
 --- !u!1 &412913874
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,8 +823,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: VoltarAoMenu
+      - m_Target: {fileID: 351857187}
+        m_MethodName: SairGameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
