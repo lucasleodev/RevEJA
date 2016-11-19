@@ -715,7 +715,6 @@ GameObject:
   - 224: {fileID: 652720155}
   - 222: {fileID: 652720158}
   - 114: {fileID: 652720157}
-  - 114: {fileID: 652720156}
   m_Layer: 5
   m_Name: imagemAmpulhetaBaixo
   m_TagString: Untagged
@@ -741,18 +740,6 @@ RectTransform:
   m_AnchoredPosition: {x: 444, y: 74.5}
   m_SizeDelta: {x: 100, y: 168}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &652720156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 652720154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cda943da57e89c946bc93eb716a7ce11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  labelTempo: {fileID: 0}
 --- !u!114 &652720157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,6 +1124,7 @@ GameObject:
   - 114: {fileID: 935528120}
   - 114: {fileID: 935528122}
   - 114: {fileID: 935528123}
+  - 114: {fileID: 935528124}
   m_Layer: 0
   m_Name: Gerenciador
   m_TagString: Untagged
@@ -1254,6 +1242,21 @@ MonoBehaviour:
   btSairSim: {fileID: 1884232041}
   btSairNao: {fileID: 1966902672}
   labelPausa: {fileID: 701803497}
+--- !u!114 &935528124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935528119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc855d70a92ed4cbc49dc99886f1c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ampulhetaCima: {fileID: 1083456596}
+  ampulhetaBaixo: {fileID: 652720154}
+  ampulCima: {fileID: 1083456599}
+  ampulBaixo: {fileID: 652720157}
 --- !u!1 &1047685853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,7 +1341,6 @@ GameObject:
   - 224: {fileID: 1083456597}
   - 222: {fileID: 1083456600}
   - 114: {fileID: 1083456599}
-  - 114: {fileID: 1083456598}
   m_Layer: 5
   m_Name: imagemAmpulhetaCima
   m_TagString: Untagged
@@ -1364,18 +1366,6 @@ RectTransform:
   m_AnchoredPosition: {x: 444, y: 240}
   m_SizeDelta: {x: 100, y: 168}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1083456598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1083456596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49a6d644f39a6384284c18f277ce6157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  labelTempo: {fileID: 0}
 --- !u!114 &1083456599
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class logicaJogo : MonoBehaviour {
     public bool tempoPausado = false;
     //cria a instância para usar os métodos da classe Corbotoes.cs
     private corBotoes cores;
+    private Hourglass ampulheta;
     //-------------FIM DESSE TRECHO---------------------
     public string[] pMathBasic;
     public string[] eMathBasic;
@@ -45,7 +46,7 @@ public class logicaJogo : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start() {    
+    void Start() {
         //cria instância e deixa botões com a cor definida como default
         cores = GetComponent<corBotoes>();
         cores.iniciarCorBotoes();
@@ -105,6 +106,7 @@ public class logicaJogo : MonoBehaviour {
     void Update() {
         if (modoJogo == 0 && tempo > 0)
         {
+            //inicia cronometro
             CronometroModoAmpulheta();
         }
         else if(modoJogo == 0)
@@ -115,7 +117,8 @@ public class logicaJogo : MonoBehaviour {
     }
 
     public void ampulMode()
-    {       
+    {        
+        //esconder outros labels da cena
         lbExp.text = "";
         lbNv.text = "";
        

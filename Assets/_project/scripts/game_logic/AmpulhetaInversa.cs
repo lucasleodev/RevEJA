@@ -23,11 +23,10 @@ public class AmpulhetaInversa : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0)
-        {
-            timer -= Time.deltaTime;
-            //ampul.fillAmount += 0.001f;
-            ampul.fillAmount += (timer / qtdTempo)/1000 ;
-        }
+        if (timer > 0)        
+            {
+                timer -= Time.deltaTime;
+                ampul.fillAmount = 1-(timer / qtdTempo);
+            }        
     }
 }
