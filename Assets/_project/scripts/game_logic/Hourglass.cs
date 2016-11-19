@@ -6,6 +6,8 @@ public class Hourglass : MonoBehaviour {
     //para as imagens da ampulheta
     public GameObject ampulhetaCima;
     public GameObject ampulhetaBaixo;
+    public GameObject corpoAmpulhetaCima;
+    public GameObject corpoAmpulhetaBaixo;
     // public GameObject ampulhetaCorpo;
     public Image ampulCima;
     public Image ampulBaixo;
@@ -40,11 +42,15 @@ public class Hourglass : MonoBehaviour {
         {
             ampulhetaBaixo.SetActive(true);
             ampulhetaCima.SetActive(true);
+            corpoAmpulhetaBaixo.SetActive(true);
+            corpoAmpulhetaCima.SetActive(true);
         }
         else
         {
             ampulhetaBaixo.SetActive(false);
             ampulhetaCima.SetActive(false);
+            corpoAmpulhetaBaixo.SetActive(false);
+            corpoAmpulhetaCima.SetActive(false);
         }
     }
 }
