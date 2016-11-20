@@ -54,9 +54,9 @@ public class logicaJogo : MonoBehaviour {
         cores.iniciarCorBotoes();
         //----------FIM DO TRECHO DE INICIAR AS CORES--------------
         // Perguntas de Matemática Básica
-        pMathBasic = new string[10] { "p0", "p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9" };
+        pMathBasic = new string[10] { "Quanto é 2+2?", "p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9" };
         // Respostas de Matemática Básica
-        rMathBasic = new string[10, 4] { { "r0a", "r0b", "r0c", "r0d" }, { "r1a", "r1b", "r1c", "r1d" }, { "r2a", "r2b", "r2c", "r2d" }, { "r3a", "r3b", "r3c", "r3d" }, { "r4a", "r4b", "r4c", "r4d" }, { "r5a", "r5b", "r5c", "r5d" }, { "r6a", "r6b", "r6c", "r6d" }, { "r7a", "r7b", "r7c", "r7d" }, { "r8a", "r8b", "r8c", "r8d" }, { "r9a", "r9b", "r9c", "r9d" } };
+        rMathBasic = new string[10, 4] { { "4", "2", "3", "1" }, { "r1a", "r1b", "r1c", "r1d" }, { "r2a", "r2b", "r2c", "r2d" }, { "r3a", "r3b", "r3c", "r3d" }, { "r4a", "r4b", "r4c", "r4d" }, { "r5a", "r5b", "r5c", "r5d" }, { "r6a", "r6b", "r6c", "r6d" }, { "r7a", "r7b", "r7c", "r7d" }, { "r8a", "r8b", "r8c", "r8d" }, { "r9a", "r9b", "r9c", "r9d" } };
         // Perguntas de Português Básico
         pPortBasic = new string[10] { "p0", "p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9" };
         // Respostas de Português Básico
