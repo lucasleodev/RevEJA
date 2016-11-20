@@ -43,8 +43,8 @@ public class logicaJogo : MonoBehaviour {
     public int acertos;
     public int erros;
     public int quest, disc;
-    //para receber a media
-    public static float media;
+    //para receber a media    
+    public static int qtdAcerto, qtdErro;
 
 
     // Use this for initialization
@@ -115,7 +115,9 @@ public class logicaJogo : MonoBehaviour {
         }
         else if(modoJogo == 0)
         {
-            // GAME OVER]
+            // GAME OVER
+            qtdAcerto = acertos;
+            qtdErro = erros;
             SceneManager.LoadScene("gameOver");
         }
     }
@@ -232,6 +234,8 @@ public class logicaJogo : MonoBehaviour {
         else
         {
             //GAME OVER
+            qtdAcerto = acertos;
+            qtdErro = erros;
             SceneManager.LoadScene("gameOver");
         }
 
@@ -283,6 +287,8 @@ public class logicaJogo : MonoBehaviour {
         else
         {
             //GAME OVER
+            qtdAcerto = acertos;
+            qtdErro = erros;
             SceneManager.LoadScene("gameOver");
         }
     }
@@ -331,6 +337,8 @@ public class logicaJogo : MonoBehaviour {
         else
         {
             //GAME OVER
+            qtdAcerto = acertos;
+            qtdErro = erros;
             SceneManager.LoadScene("gameOver");
         }
     }
@@ -379,6 +387,8 @@ public class logicaJogo : MonoBehaviour {
         else
         {
             //GAME OVER
+            qtdAcerto = acertos;
+            qtdErro = erros;
             SceneManager.LoadScene("gameOver");
         }
     }
@@ -427,6 +437,8 @@ public class logicaJogo : MonoBehaviour {
         else
         {
             //GAME OVER
+            qtdAcerto = acertos;
+            qtdErro = erros;
             SceneManager.LoadScene("gameOver");
         }
     }
@@ -491,17 +503,7 @@ public class logicaJogo : MonoBehaviour {
         }
     }
 
-    public void DefinirEstatisticas()
-    {
-        if (modoJogo == 0)
-        {
-            media = (acertos / 40) * 100;
-        }
-        else
-        {
-            media = (acertos / 10) * 100;
-        }
-    }
+    //reservar para outro metodo
 
     public void VerificarRespostaCor()
     {
