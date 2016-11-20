@@ -11,6 +11,12 @@ public class corBotoes : MonoBehaviour {
     public Button botaoC;
     public Button botaoD;
 
+    //para exibir ou esconder a ampulhete dependendo do modo de jogo
+    public GameObject corpoAmpuCima;
+    public GameObject corpoAmpuBaixo;
+    public GameObject areiaAmpuCima;
+    public GameObject areiaAmpuBaixo;
+
     //referencia a cor a ser utilizada  
     public ColorBlock corRespostaCerta;
     public ColorBlock corRespostaErrada;
@@ -37,6 +43,8 @@ public class corBotoes : MonoBehaviour {
         corNormal.pressedColor = corPadrao;
         corRespostaCerta.pressedColor = respCerta;
         corRespostaErrada.pressedColor = respErrada;
+
+        AmpulhetaOnOuOff();
     }
 	
 	// Update is called once per frame
@@ -119,6 +127,24 @@ public class corBotoes : MonoBehaviour {
         botaoB.interactable = false;
         botaoC.interactable = false;
         botaoD.interactable = false;*/
+    }
+    //deixa ela ligada ou desligada
+    public void AmpulhetaOnOuOff()
+    {
+        if(logicaJogo.modoJogo==0)
+        {
+            corpoAmpuCima.SetActive(true);
+            corpoAmpuBaixo.SetActive(true);
+            areiaAmpuCima.SetActive(true);
+            areiaAmpuBaixo.SetActive(true);
+        }
+        else
+        {
+            corpoAmpuCima.SetActive(false);
+            corpoAmpuBaixo.SetActive(false);
+            areiaAmpuCima.SetActive(false);
+            areiaAmpuBaixo.SetActive(false);
+        }
     }
     //Chama a corotina para que o jogo "pare" para que o player leia a explicação
     public void AguardarTempoResposta()

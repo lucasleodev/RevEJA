@@ -1200,6 +1200,10 @@ MonoBehaviour:
   botaoB: {fileID: 167130112}
   botaoC: {fileID: 1263683713}
   botaoD: {fileID: 1392953788}
+  corpoAmpuCima: {fileID: 1505221728}
+  corpoAmpuBaixo: {fileID: 1965358715}
+  areiaAmpuCima: {fileID: 1083456596}
+  areiaAmpuBaixo: {fileID: 652720154}
   corRespostaCerta:
     m_NormalColor: {r: 0, g: 0.47058827, b: 0.1764706, a: 1}
     m_HighlightedColor: {r: 0, g: 0.64705884, b: 0.24264707, a: 1}
