@@ -19,10 +19,9 @@ public class GameOver : MonoBehaviour {
     void Start () {
         loJogo = GetComponent<logicaJogo>();
         DefinirModoJogo();
-        DefinirEstatisticas(logicaJogo.modoJogo);
-        /*lbAcertos.text = ("Você acertou de 10");
+        lbAcertos.text = ("Você acertou de 10");
         lbErros.text = ("Você errou ");
-        lbEstatisticas.text = ("Sua média de acertos foi de %");*/
+        lbEstatisticas.text = ("Sua média de acertos foi de "+logicaJogo.media+" %");
         print(media);
         
         
@@ -32,18 +31,6 @@ public class GameOver : MonoBehaviour {
     void Update () {
 	
 	}
-
-    public void DefinirEstatisticas(int val)
-    {        
-        if(val==0)
-        {
-            media = (loJogo.acertos / 40)*100;
-        }
-        else
-        {
-            media = (loJogo.acertos/ 10)*100;
-        }
-    }
 
     public void DefinirModoJogo()
     {

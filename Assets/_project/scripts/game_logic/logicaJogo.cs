@@ -43,7 +43,8 @@ public class logicaJogo : MonoBehaviour {
     public int acertos;
     public int erros;
     public int quest, disc;
-    static int qtdErros, qtdAcertos;
+    //para receber a media
+    public static float media;
 
 
     // Use this for initialization
@@ -487,6 +488,18 @@ public class logicaJogo : MonoBehaviour {
             case 2: mathAvanc(); break;
             case 3: portBasic(); break;
             case 4: portAvanc(); break;
+        }
+    }
+
+    public void DefinirEstatisticas()
+    {
+        if (modoJogo == 0)
+        {
+            media = (acertos / 40) * 100;
+        }
+        else
+        {
+            media = (acertos / 10) * 100;
         }
     }
 
