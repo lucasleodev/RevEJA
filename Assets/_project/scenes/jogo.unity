@@ -1225,6 +1225,7 @@ MonoBehaviour:
     m_DisabledColor: {r: 0.5955882, g: 0.58858126, b: 0.5080017, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
+  explicacaoResposta: {fileID: 669254379}
   respCerta: {r: 0, g: 0.47058827, b: 0.1764706, a: 1}
   respErrada: {r: 0.72794116, g: 0.19269031, b: 0.19269031, a: 0.687}
   corPadrao: {r: 0.94117653, g: 0.7843138, b: 0.25490198, a: 1}

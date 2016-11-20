@@ -119,18 +119,18 @@ public class corBotoes : MonoBehaviour {
     //Destrava os botões para o jogador poder voltar a jogar
     public void HabilitarBotoes()
     {
-    /*    botaoA.interactable = true;
+        botaoA.interactable = true;
         botaoB.interactable = true;
         botaoC.interactable = true;
-        botaoD.interactable = true;*/
+        botaoD.interactable = true;
     }
     //Trava os botões para o jogador poder ler a explicação
     public void DesabilitarBotoes()
     {
-     /*   botaoA.interactable = false;
+        botaoA.interactable = false;
         botaoB.interactable = false;
         botaoC.interactable = false;
-        botaoD.interactable = false;*/
+        botaoD.interactable = false;
     }
     //deixa ela ligada ou desligada
     public void AmpulhetaOnOuOff()
@@ -161,11 +161,11 @@ public class corBotoes : MonoBehaviour {
     {
         logicJogo.tempoPausado = true;
         explicacaoResposta.SetActive(true);
-       // DesabilitarBotoes();        
+        DesabilitarBotoes();        
         yield return new WaitForSeconds(tempoEspera);
         logicJogo.ModoDeJogo();
         logicJogo.tempoPausado = false;
         explicacaoResposta.SetActive(false);
-        //HabilitarBotoes();        
+        HabilitarBotoes();        
     }
 }
