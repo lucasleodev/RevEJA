@@ -14,6 +14,9 @@ public class MenuPausa : MonoBehaviour
     public GameObject btSairSim;
     public GameObject btSairNao;
     public Text labelPausa;
+    //variaveis para tocar som no botao
+    public AudioSource audioSourceBotao;
+    public AudioClip somBotao;
 
     void Start()
     {
@@ -71,5 +74,11 @@ public class MenuPausa : MonoBehaviour
         labelPausa.text = "";
         botoes.HabilitarBotoes();
         Time.timeScale = 1.0f;
+    }
+
+    public void SomBotao()
+    {
+        audioSourceBotao.clip = somBotao;
+        audioSourceBotao.Play();
     }
 }

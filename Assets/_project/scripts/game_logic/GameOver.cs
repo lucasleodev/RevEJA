@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour {
 
     public AudioClip somGO;
+    public AudioClip sombotao;
+    public AudioSource sourcebotao;
     public AudioSource audioSourceGO;
 
     public Text lbModoJogo;
@@ -67,5 +69,11 @@ public class GameOver : MonoBehaviour {
     {
         audioSourceGO.clip = somGO;
         audioSourceGO.Play();
+    }
+
+    public void SomButton()
+    {
+        sourcebotao.clip = sombotao;
+        sourcebotao.Play();
     }
 }

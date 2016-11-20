@@ -11,6 +11,9 @@ public class configsGame : MonoBehaviour {
    public Dropdown selecaoResolucao;
     //temporário para armazenar a posição
    public static int posicaoResolucao;
+    //variaveis para tocar som no botao
+    public AudioSource audioSourceBotao;
+    public AudioClip somBotao;
 
     // Use this for initialization
     void Start() {
@@ -85,5 +88,11 @@ public class configsGame : MonoBehaviour {
     {
         //volta para a cena "Menu principal"
         SceneManager.LoadScene("mainMenu");
+    }
+
+    public void SomBotao()
+    {
+        audioSourceBotao.clip = somBotao;
+        audioSourceBotao.Play();
     }
 }
