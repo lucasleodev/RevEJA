@@ -11,21 +11,12 @@ public class configsGame : MonoBehaviour {
    public Dropdown selecaoResolucao;
     //temporário para armazenar a posição
    public static int posicaoResolucao;
-    //salva a resolução máxima nativa do monitor
-    public static int resolucaoNativaWidth, resolucaoNativaheight; 
-
 
     // Use this for initialization
     void Start() {
-
-
         //deixa o dropdown marcado
         //com a resolução atual
         selecaoResolucao.value = posicaoResolucao;
-
-        resolucaoNativaWidth = Screen.currentResolution.width;
-        resolucaoNativaheight = Screen.currentResolution.height;
-
 
         //se a tela estiver fullscren, o toggle está marcado
         //senão, estará desmarcado
@@ -68,7 +59,7 @@ public class configsGame : MonoBehaviour {
                 posicaoResolucao = 3;
                 break;
             case 4:
-                Screen.SetResolution(resolucaoNativaWidth, resolucaoNativaheight, botaoTelaCheia.isOn);
+                Screen.SetResolution(1366, 768, botaoTelaCheia.isOn);
                 posicaoResolucao = 4;
                 break;
             default:                

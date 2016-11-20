@@ -517,11 +517,12 @@ public class logicaJogo : MonoBehaviour {
                         if (respostaUsuario == cMathBasic[quest])
                         {
                             cores.MudancaCorBotoes(respostaUsuario);
-
+                            cores.SomCerto();
                         }
                         else
                         {
                             cores.MudancaCorBotoes(cMathBasic[quest]);
+                            cores.SomErrado();
                         }
                         break;
                     case 1:
@@ -529,11 +530,12 @@ public class logicaJogo : MonoBehaviour {
                         if (respostaUsuario == cMathAvanc[quest])
                         {
                             cores.MudancaCorBotoes(respostaUsuario);
-
+                            cores.SomCerto();
                         }
                         else
                         {
                             cores.MudancaCorBotoes(cMathAvanc[quest]);
+                            cores.SomErrado();
                         }
                         break;
                     case 2:
@@ -541,11 +543,12 @@ public class logicaJogo : MonoBehaviour {
                         if (respostaUsuario == cPortBasic[quest])
                         {
                             cores.MudancaCorBotoes(respostaUsuario);
-
+                            cores.SomCerto();
                         }
                         else
                         {
                             cores.MudancaCorBotoes(cPortBasic[quest]);
+                            cores.SomErrado();
                         }
                         break;
                     case 3:
@@ -553,11 +556,12 @@ public class logicaJogo : MonoBehaviour {
                         if (respostaUsuario == cPortAvanc[quest])
                         {
                             cores.MudancaCorBotoes(respostaUsuario);
-
+                            cores.SomCerto();
                         }
                         else
                         {
                             cores.MudancaCorBotoes(cPortAvanc[quest]);
+                            cores.SomErrado();
                         }
                         break;
                     default:
@@ -569,11 +573,12 @@ public class logicaJogo : MonoBehaviour {
                 if (respostaUsuario == cMathBasic[quest])
                 {
                     cores.MudancaCorBotoes(respostaUsuario);
-
+                    cores.SomCerto();
                 }
                 else
                 {
                     cores.MudancaCorBotoes(cMathBasic[quest]);
+                    cores.SomErrado();
                 }
                 break;
             case 2:
@@ -581,11 +586,12 @@ public class logicaJogo : MonoBehaviour {
                 if (respostaUsuario == cMathAvanc[quest])
                 {
                     cores.MudancaCorBotoes(respostaUsuario);
-
+                    cores.SomCerto();
                 }
                 else
                 {
                     cores.MudancaCorBotoes(cMathAvanc[quest]);
+                    cores.SomErrado();
                 }
                 break;
             case 3:
@@ -593,11 +599,12 @@ public class logicaJogo : MonoBehaviour {
                 if (respostaUsuario == cPortBasic[quest])
                 {
                     cores.MudancaCorBotoes(respostaUsuario);
-
+                    cores.SomCerto();
                 }
                 else
                 {
                     cores.MudancaCorBotoes(cPortBasic[quest]);
+                    cores.SomErrado();
                 }
                 break;
             case 4:
@@ -605,11 +612,12 @@ public class logicaJogo : MonoBehaviour {
                 if (respostaUsuario == cPortAvanc[quest])
                 {
                     cores.MudancaCorBotoes(respostaUsuario);
-
+                    cores.SomCerto();
                 }
                 else
                 {
                     cores.MudancaCorBotoes(cPortAvanc[quest]);
+                    cores.SomErrado();
                 }
                 break;
             default:

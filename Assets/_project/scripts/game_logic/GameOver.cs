@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour {
 
+    public AudioClip somGO;
+    public AudioSource audioSourceGO;
+
     public Text lbModoJogo;
     public Text lbAcertos;
     public Text lbErros;   
@@ -16,6 +19,7 @@ public class GameOver : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        SomGameOver();
         loJogo = GetComponent<logicaJogo>();
         DefinirModoJogo();
        // DefinirEstatisticas();
@@ -57,5 +61,11 @@ public class GameOver : MonoBehaviour {
     public void SairGameOver()
     {
         SceneManager.LoadScene("mainMenu");  
+    }
+
+    public void SomGameOver()
+    {
+        audioSourceGO.clip = somGO;
+        audioSourceGO.Play();
     }
 }

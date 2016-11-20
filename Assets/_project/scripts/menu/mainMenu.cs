@@ -32,6 +32,9 @@ public class mainMenu : MonoBehaviour {
     public GameObject btPortAvancado;
     public GameObject btMathBasico;
     public GameObject btMathAvancado;
+    //variaveis para tocar som no botao
+    public AudioSource audioSourceBotao;
+    public AudioClip somBotao;
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 
@@ -174,5 +177,11 @@ public class mainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("jogo");
         logicaJogo.modoJogo = 4;
+    }
+
+    public void SomBotao()
+    {
+        audioSourceBotao.clip = somBotao;
+        audioSourceBotao.Play();
     }
 }

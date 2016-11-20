@@ -31,6 +31,12 @@ public class corBotoes : MonoBehaviour {
     public Color respErrada = new Color(0.2F, 0.3F, 0.4F);
     public Color corPadrao = new Color(0.2F, 0.3F, 0.4F);
 
+    //variaveis para tocar os sons de certo, errado
+    public AudioSource audioSourceSonsBotao;
+    public AudioClip somCerto;
+    public AudioClip somErrado;
+
+
     public int tempoEspera = 5;
 
     // Use this for initialization
@@ -149,6 +155,18 @@ public class corBotoes : MonoBehaviour {
             areiaAmpuCima.SetActive(false);
             areiaAmpuBaixo.SetActive(false);
         }
+    }
+
+    public void SomCerto()
+    {
+        audioSourceSonsBotao.clip = somCerto;
+        audioSourceSonsBotao.Play();
+    }
+
+    public void SomErrado()
+    {
+        audioSourceSonsBotao.clip = somErrado;
+        audioSourceSonsBotao.Play();
     }
     //Chama a corotina para que o jogo "pare" para que o player leia a explicação
     public void AguardarTempoResposta()
