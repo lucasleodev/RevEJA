@@ -43,6 +43,7 @@ public class logicaJogo : MonoBehaviour {
     public int acertos;
     public int erros;
     public int quest, disc;
+    static int qtdErros, qtdAcertos;
 
 
     // Use this for initialization
@@ -92,7 +93,7 @@ public class logicaJogo : MonoBehaviour {
         respostaUsuario = -1;
         acertos = 0;
         erros = 0;
-        tempo = 300.0f;
+        tempo = 180.0f;
 
         switch (modoJogo)
         {
@@ -113,7 +114,7 @@ public class logicaJogo : MonoBehaviour {
         }
         else if(modoJogo == 0)
         {
-            // GAME OVER
+            // GAME OVER]
             SceneManager.LoadScene("gameOver");
         }
     }
@@ -600,6 +601,5 @@ public class logicaJogo : MonoBehaviour {
                 break;
         }
     }
-
 
 }

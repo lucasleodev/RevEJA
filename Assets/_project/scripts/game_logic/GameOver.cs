@@ -10,25 +10,21 @@ public class GameOver : MonoBehaviour {
     public Text lbErros;
     public Text lbEstatisticas;
 
-    float media;
-    int modoJogo;
-    int acertos;
-    int erros;
+    public float media;
+    public int modo;
 
     logicaJogo loJogo;
 
     // Use this for initialization
     void Start () {
-        modoJogo = logicaJogo.modoJogo;
-        acertos = loJogo.acertos;
-        erros = loJogo.erros;
-        //
         loJogo = GetComponent<logicaJogo>();
         DefinirModoJogo();
-        DefinirEstatisticas();
-        lbAcertos.text = ("Você acertou " + acertos + " de 10");
-        lbErros.text = ("Você errou " + erros);
-        lbEstatisticas.text = ("Sua média de acertos foi de " + media + "%");
+        DefinirEstatisticas(logicaJogo.modoJogo);
+        /*lbAcertos.text = ("Você acertou de 10");
+        lbErros.text = ("Você errou ");
+        lbEstatisticas.text = ("Sua média de acertos foi de %");*/
+        print(media);
+        
         
     }
 
@@ -37,15 +33,15 @@ public class GameOver : MonoBehaviour {
 	
 	}
 
-    public void DefinirEstatisticas()
+    public void DefinirEstatisticas(int val)
     {        
-        if(modoJogo==0)
+        if(val==0)
         {
-            media = (acertos / 40)*100;
+            media = (loJogo.acertos / 40)*100;
         }
         else
         {
-            media = (acertos / 10)*100;
+            media = (loJogo.acertos/ 10)*100;
         }
     }
 

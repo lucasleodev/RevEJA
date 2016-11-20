@@ -1686,9 +1686,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Nesse modo, perguntas do n\xEDvel Normal e Avan\xE7ado ser\xE3o mescladas
-    e voc\xEA ter\xE1 um tempo limite para responder a maior quantidade poss\xEDvel.
-    N\xE3o se preocupe, o tempo pausar\xE1 quando a resposta correta e sua explica\xE7\xE3o
-    for exibida. Boa sorte!"
+    e voc\xEA ter\xE1 um tempo limite para responder a maior quantidade poss\xEDvel
+    (3 minutos). N\xE3o se preocupe, o tempo pausar\xE1 quando a resposta correta
+    e sua explica\xE7\xE3o for exibida. Boa sorte!"
 --- !u!222 &883782958
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3896,8 +3896,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "No modo b\xE1sico, ser\xE3o perguntas do Ensino Fundamental. No modo avan\xE7ado,
-    ser\xE3o perguntas do Ensino M\xE9dio. Ser\xE3o 30 perguntas nos dois modos, 15
-    de matem\xE1tica e 15 de portugu\xEAs. N\xE3o h\xE1 tempo limite, ent\xE3o responda
+    ser\xE3o perguntas do Ensino M\xE9dio. Ser\xE3o 20 perguntas nos dois modos, 10
+    de matem\xE1tica e 10 de portugu\xEAs. N\xE3o h\xE1 tempo limite, ent\xE3o responda
     com calma e tranquilidade. Boa sorte!"
 --- !u!222 &1948077025
 CanvasRenderer:
