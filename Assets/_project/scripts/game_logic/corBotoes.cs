@@ -20,7 +20,10 @@ public class corBotoes : MonoBehaviour {
     //referencia a cor a ser utilizada  
     public ColorBlock corRespostaCerta;
     public ColorBlock corRespostaErrada;
-    public ColorBlock corNormal;  
+    public ColorBlock corNormal;
+
+    //mostrtar a explicação da resposta
+    public GameObject explicacaoResposta;
     
 
     //as cores dos botoes a serem alteradas
@@ -32,6 +35,7 @@ public class corBotoes : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        explicacaoResposta.SetActive(false);
         //cria a instancia de logicaJogo.cs
         logicJogo = GetComponent<logicaJogo>();
         //cor dos botoes no estado normal
@@ -156,10 +160,12 @@ public class corBotoes : MonoBehaviour {
     IEnumerator PausaResposta()
     {
         logicJogo.tempoPausado = true;
+        explicacaoResposta.SetActive(true);
        // DesabilitarBotoes();        
         yield return new WaitForSeconds(tempoEspera);
         logicJogo.ModoDeJogo();
         logicJogo.tempoPausado = false;
+        explicacaoResposta.SetActive(false);
         //HabilitarBotoes();        
     }
 }
