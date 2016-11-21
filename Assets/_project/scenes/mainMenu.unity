@@ -682,8 +682,8 @@ RectTransform:
   m_RootOrder: 11
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 239.5698, y: 103.83}
-  m_SizeDelta: {x: 327.42, y: 480}
+  m_AnchoredPosition: {x: 239.5698, y: 0.6899719}
+  m_SizeDelta: {x: 327, y: 686.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &326589791
 MonoBehaviour:
@@ -706,7 +706,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: a47240d4acfb6cd4f98b29c543eae90c, type: 3}
-    m_FontSize: 26
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
