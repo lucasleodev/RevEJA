@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class logicaJogo : MonoBehaviour {
+public class logicaJogo : MonoBehaviour
+{
     //cria um booleano pra pausar o timeDelta
     public bool tempoPausado = false;
     //cria a instância para usar os métodos da classe Corbotoes.cs
@@ -48,7 +49,8 @@ public class logicaJogo : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         //corrige um bug de setar o tempo em 0 após sair pelo pause
         Time.timeScale = 1.0f;
         //cria instância e deixa botões com a cor definida como default
@@ -107,13 +109,14 @@ public class logicaJogo : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         if (modoJogo == 0 && tempo > 0)
         {
             //inicia cronometro
             CronometroModoAmpulheta();
         }
-        else if(modoJogo == 0)
+        else if (modoJogo == 0)
         {
             // GAME OVER
             qtdAcerto = acertos;
@@ -129,15 +132,15 @@ public class logicaJogo : MonoBehaviour {
         //esconder outros labels da cena
         lbExp.text = "";
         lbNv.text = "";
-       
-        if(respostaUsuario == -1 && acertos+erros < 40)
+
+        if (respostaUsuario == -1 && acertos + erros < 40)
         {
             quest = Random.Range(0, 9);
             disc = Random.Range(0, 3);
 
-            for (int i = 0;i < 65535;i++)
+            for (int i = 0; i < 65535; i++)
             {
-                if(pRespondidasAmp[disc, quest] == true)
+                if (pRespondidasAmp[disc, quest] == true)
                 {
                     quest = Random.Range(0, 9);
                     disc = Random.Range(0, 3);
@@ -151,9 +154,9 @@ public class logicaJogo : MonoBehaviour {
                 lbRespB.text = rMathBasic[quest, 1];
                 lbRespC.text = rMathBasic[quest, 2];
                 lbRespD.text = rMathBasic[quest, 3];
- 
+
             }
-            else if(disc == 1)
+            else if (disc == 1)
             {
                 lbPergunta.text = pMathAvanc[quest];
                 lbRespA.text = rMathAvanc[quest, 0];
@@ -162,7 +165,7 @@ public class logicaJogo : MonoBehaviour {
                 lbRespD.text = rMathAvanc[quest, 3];
 
             }
-            else if(disc == 2)
+            else if (disc == 2)
             {
                 lbPergunta.text = pPortBasic[quest];
                 lbRespA.text = rPortBasic[quest, 0];
@@ -171,7 +174,7 @@ public class logicaJogo : MonoBehaviour {
                 lbRespD.text = rPortBasic[quest, 3];
 
             }
-            else if(disc == 3)
+            else if (disc == 3)
             {
                 lbPergunta.text = pPortAvanc[quest];
                 lbRespA.text = rPortAvanc[quest, 0];
@@ -181,11 +184,11 @@ public class logicaJogo : MonoBehaviour {
 
             }
         }
-        else if(acertos+erros < 40)
+        else if (acertos + erros < 40)
         {
-            if(disc == 0)
+            if (disc == 0)
             {
-                if(respostaUsuario == cMathBasic[quest])
+                if (respostaUsuario == cMathBasic[quest])
                 {
                     acertos++;
                 }
@@ -194,7 +197,7 @@ public class logicaJogo : MonoBehaviour {
                     erros++;
                 }
             }
-            else if(disc == 1)
+            else if (disc == 1)
             {
                 if (respostaUsuario == cMathAvanc[quest])
                 {
@@ -216,7 +219,7 @@ public class logicaJogo : MonoBehaviour {
                     erros++;
                 }
             }
-            else if(disc == 3)
+            else if (disc == 3)
             {
                 if (respostaUsuario == cPortAvanc[quest])
                 {
@@ -241,7 +244,7 @@ public class logicaJogo : MonoBehaviour {
 
 
 
-        
+
     }
 
     public void mathBasic()
@@ -251,7 +254,6 @@ public class logicaJogo : MonoBehaviour {
         //jogo em si
         lbNv.text = "Básico";
         lbDisc.text = "Matemática";
-        quest = Random.Range(0, 9);
 
         if (respostaUsuario == -1 && acertos + erros < 10 && erros < 3)
         {
@@ -270,7 +272,7 @@ public class logicaJogo : MonoBehaviour {
             lbRespC.text = rMathBasic[quest, 2];
             lbRespD.text = rMathBasic[quest, 3];
         }
-        else if( acertos + erros < 10 && erros < 3)
+        else if (acertos + erros < 10 && erros < 3)
         {
             if (respostaUsuario == cMathBasic[quest])
             {
@@ -300,8 +302,6 @@ public class logicaJogo : MonoBehaviour {
         //jogo em si
         lbNv.text = "Básico";
         lbDisc.text = "Português";
-
-        quest = Random.Range(0, 9);
 
         if (respostaUsuario == -1 && acertos + erros < 10 && erros < 3)
         {
@@ -351,8 +351,6 @@ public class logicaJogo : MonoBehaviour {
         lbDisc.text = "Matemática";
         lbNv.text = "Avançado";
 
-        quest = Random.Range(0, 9);
-
         if (respostaUsuario == -1 && acertos + erros < 10 && erros < 3)
         {
 
@@ -401,8 +399,6 @@ public class logicaJogo : MonoBehaviour {
         lbDisc.text = "Português";
         lbNv.text = "Avançado";
 
-        quest = Random.Range(0, 9);
-
         if (respostaUsuario == -1 && acertos + erros < 10 && erros < 3)
         {
 
@@ -448,7 +444,7 @@ public class logicaJogo : MonoBehaviour {
         respostaUsuario = 0;
         VerificarRespostaCor();
         //aguarda a pausa para ler a explicação
-        cores.AguardarTempoResposta();        
+        cores.AguardarTempoResposta();
     }
 
     public void respB()
@@ -478,7 +474,7 @@ public class logicaJogo : MonoBehaviour {
     //caso seja false, o tempo corre normal. Se for true, ele é pausado
     public void CronometroModoAmpulheta()
     {
-        if(tempoPausado==false)
+        if (tempoPausado == false)
         {
             tempo -= Time.deltaTime;
         }
