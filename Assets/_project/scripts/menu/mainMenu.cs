@@ -14,6 +14,7 @@ public class mainMenu : MonoBehaviour {
     public GameObject botaoJogar;
     public GameObject botaoConfig;
     public GameObject botaoSair;
+    public GameObject botaoComoJogar;
     //Botoes dos modos de jogo
     public GameObject btNiveis;
     public GameObject btAmpulheta;
@@ -35,6 +36,10 @@ public class mainMenu : MonoBehaviour {
     //variaveis para tocar som no botao
     public AudioSource audioSourceBotao;
     public AudioClip somBotao;
+    //label para os creditos
+    public GameObject lbComoJogar;
+    public GameObject lbCreditos;
+    public GameObject btSairCreditos;
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 
@@ -47,6 +52,7 @@ public class mainMenu : MonoBehaviour {
         botaoJogar.SetActive(true);
         botaoConfig.SetActive(true);
         botaoSair.SetActive(true);
+        botaoComoJogar.SetActive(true);
         //Esconde modos de jogo e botao voltar
         btVoltar.SetActive(false);
         btAmpulheta.SetActive(false);
@@ -64,6 +70,9 @@ public class mainMenu : MonoBehaviour {
         btPortBasico.SetActive(false);
         btMathAvancado.SetActive(false);
         btMathBasico.SetActive(false);
+        lbComoJogar.SetActive(false);
+        lbCreditos.SetActive(false);
+        btSairCreditos.SetActive(false);
         //UI de configurações
 
 
@@ -89,6 +98,7 @@ public class mainMenu : MonoBehaviour {
         botaoJogar.SetActive(false);
         botaoConfig.SetActive(false);
         botaoSair.SetActive(false);
+        botaoComoJogar.SetActive(false);
         //Exibe modos de jogo e botao voltar
         btVoltar.SetActive(true);
         btAmpulheta.SetActive(true);
@@ -100,6 +110,54 @@ public class mainMenu : MonoBehaviour {
     public void AbrirConfiguracoes()
     {
         SceneManager.LoadScene("config");
+    }
+
+    public void ComoJogar()
+    {
+        //esconde no HUD
+        logoCreatura.SetActive(false);
+        logoReveja.SetActive(false);
+        botaoJogar.SetActive(false);
+        botaoConfig.SetActive(false);
+        botaoSair.SetActive(false);
+        botaoComoJogar.SetActive(false);
+        btVoltar.SetActive(false);
+        //exibe botão voltar        
+        btSairCreditos.SetActive(true);
+        //exibe créditos
+        lbComoJogar.SetActive(true);
+        lbCreditos.SetActive(true);
+    }
+
+    public void SairTelaCreditos()
+    {
+        //Exibe elementos iniciais da tela
+        logoCreatura.SetActive(true);
+        logoReveja.SetActive(true);
+        botaoJogar.SetActive(true);
+        botaoConfig.SetActive(true);
+        botaoSair.SetActive(true);
+        botaoComoJogar.SetActive(true);
+        //Esconde modos de jogo e botao voltar
+        btVoltar.SetActive(false);
+        btAmpulheta.SetActive(false);
+        btNiveis.SetActive(false);
+        textModosDeJogo.SetActive(false);
+        btAmpulhetaIniciar.SetActive(false);
+        textModoJogoAmpulheta.SetActive(false);
+        textDescricaoAmpulheta.SetActive(false);
+        textModoJogoNiveis.SetActive(false);
+        btAmpulhetaIniciar.SetActive(false);
+        textDescricaoNiveis.SetActive(false);
+        btNivelBasico.SetActive(false);
+        btNivelAvancado.SetActive(false);
+        btPortAvancado.SetActive(false);
+        btPortBasico.SetActive(false);
+        btMathAvancado.SetActive(false);
+        btMathBasico.SetActive(false);
+        lbComoJogar.SetActive(false);
+        lbCreditos.SetActive(false);
+        btSairCreditos.SetActive(false);
     }
 
     public void ModoAmpulheta()
