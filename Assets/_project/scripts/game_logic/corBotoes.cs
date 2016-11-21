@@ -36,6 +36,9 @@ public class corBotoes : MonoBehaviour {
     public AudioClip somCerto;
     public AudioClip somErrado;
 
+    //para uso no MenuPausa
+    public bool corotinaLigada = false;
+
 
     public int tempoEspera = 5;
 
@@ -177,6 +180,7 @@ public class corBotoes : MonoBehaviour {
     //corotina para fazer o jogo esperar certo tempo para mostrar a resposta
     IEnumerator PausaResposta()
     {
+        corotinaLigada = true;
         logicJogo.tempoPausado = true;
         explicacaoResposta.SetActive(true);
         DesabilitarBotoes();        
@@ -184,6 +188,7 @@ public class corBotoes : MonoBehaviour {
         logicJogo.ModoDeJogo();
         logicJogo.tempoPausado = false;
         explicacaoResposta.SetActive(false);
-        HabilitarBotoes();        
+        HabilitarBotoes();
+        corotinaLigada = false;
     }
 }

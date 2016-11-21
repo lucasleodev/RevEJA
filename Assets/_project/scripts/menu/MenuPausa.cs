@@ -72,7 +72,10 @@ public class MenuPausa : MonoBehaviour
         btSairSim.SetActive(false);
         btSairNao.SetActive(false);
         labelPausa.text = "";
-        botoes.HabilitarBotoes();
+        if (botoes.corotinaLigada == false)
+        {
+            botoes.HabilitarBotoes();
+        }
         Time.timeScale = 1.0f;
     }
 
