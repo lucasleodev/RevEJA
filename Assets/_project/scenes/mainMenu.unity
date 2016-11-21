@@ -682,8 +682,8 @@ RectTransform:
   m_RootOrder: 11
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 290.36185, y: 88.10098}
-  m_SizeDelta: {x: 429, y: 449}
+  m_AnchoredPosition: {x: 290.36185, y: 103.83}
+  m_SizeDelta: {x: 429, y: 480.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &326589791
 MonoBehaviour:
@@ -717,8 +717,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "CONTROLES\n\n-Bot\xE3o ESC Pausa o jogo\n-Mouse Movimenta o cursor\n-Bot\xE3o
-    Esquerdo do Mouse Seleciona os bot\xF5es de resposta\n\nCOMO JOGAR\nSimplesmente
+  m_Text: "CONTROLES\n\n-Bot\xE3o ESC \n  Pausa o jogo\n-Mouse\n   Movimenta o cursor\n-Bot\xE3o
+    Esquerdo do Mouse\n   Seleciona os bot\xF5es de resposta\n\nCOMO JOGAR\nSimplesmente
     selecione a resposta correta entre as 4 exibidas de cada pergunta. Se for correta,
     ela mudar\xE1 para a cor VERDE. Se for errada, mudar\xE1 para a VERMELHA. Cada
     modo de jogo \xE9 explicado antes de inici\xE1-lo.\n"
@@ -3678,8 +3678,8 @@ RectTransform:
   m_RootOrder: 12
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -363.81506, y: -0.8399048}
-  m_SizeDelta: {x: 613, y: 640}
+  m_AnchoredPosition: {x: -363.81506, y: -7.974945}
+  m_SizeDelta: {x: 613, y: 704.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1396891710
 MonoBehaviour:
@@ -3702,7 +3702,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: a47240d4acfb6cd4f98b29c543eae90c, type: 3}
-    m_FontSize: 18
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -3713,12 +3713,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "CR\xC9DITOS\n\nGabriele\nL\xEDder de Documenta\xE7\xE3o\n\nLucas\nPrograma\xE7\xE3o
-    de UI\n\xC1udio\nArte\nAuxiliar de Documenta\xE7\xE3o\n\nNicolas\nL\xEDder de
-    Programa\xE7\xE3o\nAuxiliar de Documenta\xE7\xE3o\n\nSons por Kevin MacLeod (http://incompetech.com)
-    e Filippo Vicarelli (http://www.noiseforfun.com)\n\nFonte Dustismo por Cheapskate
-    Fonts (http://www.dafont.com/pt/dustismo.font)\n\nBackground de lousa por MattiaMc
-    (http://mattiamc.deviantart.com/art/ChalkBoard-Texture-MC2015-506107812)"
+  m_Text: "CR\xC9DITOS\n\nGabriele Gato\nL\xEDder de Documenta\xE7\xE3o\n\nLucas Leonardo\nPrograma\xE7\xE3o
+    de UI\n\xC1udio\nArte\nAuxiliar de Documenta\xE7\xE3o\n\nNicolas Santana\nL\xEDder
+    de Programa\xE7\xE3o\nAuxiliar de Documenta\xE7\xE3o\n\nSons por Kevin MacLeod
+    (http://incompetech.com) e Filippo Vicarelli (http://www.noiseforfun.com)\n\nFonte
+    Dustismo por Cheapskate Fonts (http://www.dafont.com/pt/dustismo.font)\n\nBackground
+    de lousa por MattiaMc (http://mattiamc.deviantart.com/art/ChalkBoard-Texture-MC2015-506107812)"
 --- !u!222 &1396891711
 CanvasRenderer:
   m_ObjectHideFlags: 0
