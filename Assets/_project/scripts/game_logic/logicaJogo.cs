@@ -96,7 +96,7 @@ public class logicaJogo : MonoBehaviour
         respostaUsuario = -1;
         acertos = 0;
         erros = 0;
-        tempo = 180.0f;
+        tempo = 300.0f;
 
         switch (modoJogo)
         {
