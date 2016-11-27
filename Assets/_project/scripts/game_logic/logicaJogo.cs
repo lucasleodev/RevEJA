@@ -58,9 +58,9 @@ public class logicaJogo : MonoBehaviour
         cores.iniciarCorBotoes();
         //----------FIM DO TRECHO DE INICIAR AS CORES--------------
         // Perguntas de Matemática Básica
-        pMathBasic = new string[10] { "Quanto é 2+2?", "p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9" };
+        pMathBasic = new string[10] { "Assinale a alternativa que mostra um número compreendido entre 2,31 e 2,32:", "p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9" };
         // Respostas de Matemática Básica
-        rMathBasic = new string[10, 4] { { "4", "2", "3", "1" }, { "r1a", "r1b", "r1c", "r1d" }, { "r2a", "r2b", "r2c", "r2d" }, { "r3a", "r3b", "r3c", "r3d" }, { "r4a", "r4b", "r4c", "r4d" }, { "r5a", "r5b", "r5c", "r5d" }, { "r6a", "r6b", "r6c", "r6d" }, { "r7a", "r7b", "r7c", "r7d" }, { "r8a", "r8b", "r8c", "r8d" }, { "r9a", "r9b", "r9c", "r9d" } };
+        rMathBasic = new string[10, 4] { { "2,315 ", "2,309", "2,205", "2,305 " }, { "r1a", "r1b", "r1c", "r1d" }, { "r2a", "r2b", "r2c", "r2d" }, { "r3a", "r3b", "r3c", "r3d" }, { "r4a", "r4b", "r4c", "r4d" }, { "r5a", "r5b", "r5c", "r5d" }, { "r6a", "r6b", "r6c", "r6d" }, { "r7a", "r7b", "r7c", "r7d" }, { "r8a", "r8b", "r8c", "r8d" }, { "r9a", "r9b", "r9c", "r9d" } };
         // Perguntas de Português Básico
         pPortBasic = new string[10] { "p0", "p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9" };
         // Respostas de Português Básico
@@ -74,7 +74,7 @@ public class logicaJogo : MonoBehaviour
         // Respostas de Português Avançado
         rPortAvanc = new string[10, 4] { { "r0a", "r0b", "r0c", "r0d" }, { "r1a", "r1b", "r1c", "r1d" }, { "r2a", "r2b", "r2c", "r2d" }, { "r3a", "r3b", "r3c", "r3d" }, { "r4a", "r4b", "r4c", "r4d" }, { "r5a", "r5b", "r5c", "r5d" }, { "r6a", "r6b", "r6c", "r6d" }, { "r7a", "r7b", "r7c", "r7d" }, { "r8a", "r8b", "r8c", "r8d" }, { "r9a", "r9b", "r9c", "r9d" } };
         // Explicações de Matemática Básica
-        eMathBasic = new string[10] { "e0", "e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9" };
+        eMathBasic = new string[10] { "2,315 está entre 2,31 e 2,32. Como as casas decimais podem tender ao infinito (2,310000000000001 por exemplo), ele está incluso", "e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9" };
         // Explicações de Matemática Avançada
         eMathAvanc = new string[10] { "e0", "e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9" };
         // Explicações de Português Básico
@@ -271,6 +271,7 @@ public class logicaJogo : MonoBehaviour
             lbRespB.text = rMathBasic[quest, 1];
             lbRespC.text = rMathBasic[quest, 2];
             lbRespD.text = rMathBasic[quest, 3];
+            lbExp.text = eMathBasic[quest];
         }
         else if (acertos + erros < 10 && erros < 3)
         {
@@ -319,6 +320,9 @@ public class logicaJogo : MonoBehaviour
             lbRespB.text = rPortBasic[quest, 1];
             lbRespC.text = rPortBasic[quest, 2];
             lbRespD.text = rPortBasic[quest, 3];
+            lbExp.text = ePortBasic[quest];
+
+
         }
         else if (acertos + erros < 10 && erros < 3)
         {
@@ -367,6 +371,7 @@ public class logicaJogo : MonoBehaviour
             lbRespB.text = rMathAvanc[quest, 1];
             lbRespC.text = rMathAvanc[quest, 2];
             lbRespD.text = rMathAvanc[quest, 3];
+            lbExp.text = eMathAvanc[quest];
         }
         else if (acertos + erros < 10 && erros < 3)
         {
@@ -415,6 +420,7 @@ public class logicaJogo : MonoBehaviour
             lbRespB.text = rPortAvanc[quest, 1];
             lbRespC.text = rPortAvanc[quest, 2];
             lbRespD.text = rPortAvanc[quest, 3];
+            lbExp.text = ePortAvanc[quest];
         }
         else if (acertos + erros < 10 && erros < 3)
         {

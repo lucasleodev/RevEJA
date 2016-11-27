@@ -182,6 +182,7 @@ public class corBotoes : MonoBehaviour {
     {
         corotinaLigada = true;
         logicJogo.tempoPausado = true;
+        
         explicacaoResposta.SetActive(true);
         DesabilitarBotoes();        
         yield return new WaitForSeconds(tempoEspera);
