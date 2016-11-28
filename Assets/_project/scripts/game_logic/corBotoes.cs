@@ -40,7 +40,7 @@ public class corBotoes : MonoBehaviour {
     public bool corotinaLigada = false;
 
 
-    public int tempoEspera = 5;
+    public int tempoEspera = 15;
 
     // Use this for initialization
     void Start () {
