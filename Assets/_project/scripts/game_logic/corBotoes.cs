@@ -40,7 +40,7 @@ public class corBotoes : MonoBehaviour {
     public bool corotinaLigada = false;
 
 
-    public int tempoEspera = 15;
+    public int tempoEspera = 18;
 
     // Use this for initialization
     void Start () {
@@ -181,8 +181,7 @@ public class corBotoes : MonoBehaviour {
     IEnumerator PausaResposta()
     {
         corotinaLigada = true;
-        logicJogo.tempoPausado = true;
-        
+        logicJogo.tempoPausado = true;        
         explicacaoResposta.SetActive(true);
         DesabilitarBotoes();        
         yield return new WaitForSeconds(tempoEspera);

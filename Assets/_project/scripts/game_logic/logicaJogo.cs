@@ -68,7 +68,7 @@ public class logicaJogo : MonoBehaviour
         // Perguntas de Matemática Avançada
         pMathAvanc = new string[10] { "Resolva a expressão a seguir e marque a alternativa que corresponde ao resultado certo: 2³x2³+3/2⁶ = ?", "Uma massa de bolo precisa ser batida durante 1/4 de hora , ou seja , durante:", "Carla está calculando custo de um a viagem de carro. Ela sabe que, para andar 120Km seu carro consome 15 litros de combustível cujo preço é R$ 2,00 o litro. Para uma viagem de 960Km, Carla gastará, apenas com combustível:", "Uma máquina fotográfica custava R$ 400,00. No Dia dos Pais foi vendida com um desconto de 5% e, logo depois, em cima do novo preço sofreu um aumento de 10%. O seu preço atual, em reais, é:", "João tem um quadro retangular que mede 25 cm x 15 cm. A área desse quadro em cm² é:", "A área de um quadrado de tamanho x+2 é 49 cm². Logo, o valor de x é:", "A equação (x-3) * (x-2)=0  é a forma fatorada de:", "A nota de José, nos 3 primeiros bimestres do ano, foi 7. No último bimestre, porém, ele tirou 9. Sua média final, então, foi de:", "Em um retângulo de largura de 5 cm e comprimento de y cm, sua área é de 45cm². Qual seu comprimento?", "Em um restaurante, o cardápio constitui de 3 opções de entradas, 5 opções de pratos principais, 4 bebidas e 8 sobremesas. Qual a combinação possível de refeições completas (entrada, prato principal, bebida e sobremesa)?" };
         // Respostas de Matemática Avançada
-        rMathAvanc = new string[10, 4] { { "3", "24", "32", "27" }, { "5 min", "15 min ", "30 min", "45 min" }, { "R$ 120,00 ", "R$ 128,00", "R$ 220,00 ", "R$ 240,00" }, { "R$ 405,00", "R$ 412,00", "R$ 418,00", "R$ 420,00" }, { "375", "175", "39", "111" }, { "5", "6", "9", "11" }, { "X²-6=0", "x²-5x-6=0", "x²-5x+6=0", "2x-5=0" }, { "6,5", "7", "8", "7,5" }, { "7", "8", "9", "6" }, { "480", "320", "240", "560" } };
+        rMathAvanc = new string[10, 4] { { "3", "24", "32", "27" }, { "5 min", "15 min ", "30 min", "45 min" }, { "R$ 120,00 ", "R$ 128,00", "R$ 220,00 ", "R$ 240,00" }, { "R$ 405,00", "R$ 412,00", "R$ 418,00", "R$ 420,00" }, { "375", "175", "39", "111" }, { "5", "6", "9", "11" }, { "X²-6=0", "x²-5x-6=0", "x²-5x+6=0", "2x-5=0" }, { "6,5", "7", "8", "7,5" }, { "9", "8", "7", "6" }, { "480", "320", "240", "560" } };
         // Perguntas de Português Avançado
         pPortAvanc = new string[10] { "Dentre as palavras abaixo, apenas uma apresenta prefixo e sufixo. Assinale-a:", "Qual movimento literário tem como características a preocupação dos artistas com o equilíbrio artístico, combatendo os exagereos de estilos anteriores, como o Romantismo?", "Aquisição à vista. A Bauducco, maior fabricante de panetones do país, está negociando a compra de sua maior concorrente, a Visconti, subsidiária brasileira da italiana Visagis. O negócio vem sendo mantido sob sigilo pelas duas empresas em razão da proximidade do Natal. Seus controladores temem que o anúncio dessa união – resultando numa espécie de AmBev dos panetones – melindre os varejistas. (Cláudia Vassallo, na Exame, dez./99)/*/*/*/*/Por “aquisição à vista” entende-se, no texto:", "No substantivo CEDER, sua derivada fica:", "“Modo Indicativo”: No pretérito mais que perfeito, o verbo poup-o fica:", "“Modo Subjuntivo”: No pretérito imperfeito, o verbo levar fica:", "De que século é o Trovadorismo?", "Quais as características do Gênero Lírico?", "Qual é a característica do Romantismo?", "Sujeito 1: 5 tiros? Sujeito 2: É. Sujeito 1: Brincando de pegador? Sujeito 2: É. O PM pensou que... Sujeito 1: Hoje? Sujeito 2: Cedinho./*/*/*/*/*/ Os sinais de pontuação são elementos com importantes funções para a progressão temática. Nesse miniconto, as reticências foram utilizadas para indicar:" };
         // Respostas de Português Avançado
@@ -154,6 +154,7 @@ public class logicaJogo : MonoBehaviour
                 lbRespB.text = rMathBasic[quest, 1];
                 lbRespC.text = rMathBasic[quest, 2];
                 lbRespD.text = rMathBasic[quest, 3];
+                lbExp.text = eMathBasic[quest];
 
             }
             else if (disc == 1)
@@ -163,6 +164,7 @@ public class logicaJogo : MonoBehaviour
                 lbRespB.text = rMathAvanc[quest, 1];
                 lbRespC.text = rMathAvanc[quest, 2];
                 lbRespD.text = rMathAvanc[quest, 3];
+                lbExp.text = eMathAvanc[quest];
 
             }
             else if (disc == 2)
@@ -172,6 +174,7 @@ public class logicaJogo : MonoBehaviour
                 lbRespB.text = rPortBasic[quest, 1];
                 lbRespC.text = rPortBasic[quest, 2];
                 lbRespD.text = rPortBasic[quest, 3];
+                lbExp.text = ePortBasic[quest];
 
             }
             else if (disc == 3)
@@ -181,6 +184,7 @@ public class logicaJogo : MonoBehaviour
                 lbRespB.text = rPortAvanc[quest, 1];
                 lbRespC.text = rPortAvanc[quest, 2];
                 lbRespD.text = rPortAvanc[quest, 3];
+                lbExp.text = ePortAvanc[quest];
 
             }
         }
